@@ -4,6 +4,13 @@
 	<title>Company</title>
 	<link rel="stylesheet" href="1.css">
 	<script src="1.js"></script>
+
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+	    $(function(){
+		    $("#icluded").load("2.html");
+	    });
+</script>
 </head>
 
 <body>
@@ -20,7 +27,7 @@
 	<section id="section1"></section>
 
 	<div id="paragraph1" >
-		<include src="2.html"></include>
+		<div id="icluded"></div>
 	</div>
 
 	<div id="calculation" style="display: none;">
