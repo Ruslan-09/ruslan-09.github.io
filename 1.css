@@ -1,0 +1,36 @@
+body {
+    zoom: 2;
+    background: linear-gradient(90deg, lightgray, gray); 
+}
+nav {
+    text-align: center;
+}
+img {
+    width: 50px; height: 40px;
+    margin: 0 15px 0 200px;
+    border-radius: 50%;
+    float: left;
+}
+h1 {
+    color: rgb(133, 67, 67);
+    text-shadow: 1px 2px 2px rgb(21, 21, 21);
+}
+section {
+    font-size: 80%;
+    margin: 30px;
+    line-height: 150%;
+}
+button {
+    background: linear-gradient(90deg, lightblue, rgb(212, 97, 117));
+    border: solid rgb(185, 75, 93);
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px;
+    margin: 0 10px 10px 10px;
+}
+button:active {
+    background: linear-gradient(90deg, lightblue, rgb(212, 97, 117));
+    border: solid rgb(185, 75, 93);
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px;
+    transform: translate(2px, 2px);
+}

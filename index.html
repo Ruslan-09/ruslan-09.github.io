@@ -1,1 +1,47 @@
-Hello Ruslan!
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Company</title>
+	<link rel="stylesheet" href="1.css">
+	<script src="1.js"></script>
+</head>
+
+<body>
+	<header>
+		<img src="icon.jpg">
+		<h1>John Smith & Co</h1>
+	</header>
+	<nav>
+		<button onclick="aboutUs()">About us</button>
+		<button onclick="calculate()">Calculate</button>
+		<button onclick="contactUs()">Contact us</button>
+	</nav>
+
+	<section id="section1"></section>
+
+	<div id="paragraph1" >
+		<include src="2.html"></include>
+	</div>
+
+	<div id="calculation" style="display: none;">
+		<div style="text-align: center;">
+		<h2>Input numbers</h2> 
+		<input type="number" id="number" placeholder="Write" value=""><br><br>                                
+		<button type="button" onclick="add()">Add number</button> 
+		<button type="button" onclick="calc()">Calculate Avarage</button><br> 
+		<button type="button" onclick="max()">Get max</button> 
+		<button type="button" onclick="min()">Get min</button> 
+		<h4 id="array"></h4>      
+		<p id="avarage"></p>
+		<p id="maxValue"></p>
+		<p id="minValue"></p> 
+	    </div>
+    </div>
+
+	<div id="contacts" style="display: none;">
+		Adress: 3225. Sokak, Ciftlikkoy, Yenisehir, Mersin. <br>
+		Tel.: +90-536-017-33-98<br>
+		E-mail: JohnSmithAndCo@gmail.com <br>
+	</div>
+</body> 
+</html>
