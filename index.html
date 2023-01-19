@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html>
 <head>
-	<title>Company</title>
+	<title>My webpage</title>
 	<link rel="stylesheet" href="1.css">
 	<script src="1.js"></script>
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -15,12 +15,12 @@
 <body>
 	<header>
 		<img src="icon.jpg">
-		<h1>John Smith & Co</h1>
+		<h1>Ruslan Bairamuk</h1>
 	</header>
 	<nav>
-		<button onclick="aboutUs()">About us</button>
-		<button onclick="calculate()">Calculate</button>
-		<button onclick="contactUs()">Contact us</button>
+		<button id="about" class="nav" onclick="aboutUs()">About Me</button>
+		<button id="calc" class="nav" onclick="calculate()">My works</button>
+		<button id="contact" class="nav" onclick="contactUs()">Contact Me</button>
 	</nav>
 
 	<section id="section1"></section>
@@ -30,7 +30,7 @@
 	</div>
 
 	<div id="calculation" style="display: none;">
-		<div style="text-align: center;">
+		<div style="text-align: center; margin: 0 350px 0 0;">
 		<h2>Input numbers</h2> 
 		<input type="number" id="number" placeholder="Write" value=""><br><br>                                
 		<button type="button" onclick="add()">Add number</button> 

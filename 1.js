@@ -1,13 +1,22 @@
 function aboutUs() {
     document.getElementById("section1").innerHTML = document.getElementById("paragraph1").innerHTML
+    document.getElementById("about").classList.add('selected');
+    document.getElementById("calc").classList.remove('selected');
+    document.getElementById("contact").classList.remove('selected');
 }
 
 function calculate() {
     document.getElementById("section1").innerHTML = document.getElementById("calculation").innerHTML
+    document.getElementById("calc").classList.add('selected');
+    document.getElementById("about").classList.remove('selected');
+    document.getElementById("contact").classList.remove('selected'); 
 }
 
 function contactUs() {
     document.getElementById("section1").innerHTML = document.getElementById("contacts").innerHTML
+    document.getElementById("contact").classList.add('selected');
+    document.getElementById("about").classList.remove('selected');
+    document.getElementById("calc").classList.remove('selected');
 }
 
 let array = []

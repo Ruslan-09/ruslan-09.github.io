@@ -1,36 +1,55 @@
 body {
     zoom: 2;
-    background: linear-gradient(90deg, lightgray, gray); 
-}
-nav {
-    text-align: center;
+    background: linear-gradient(270deg, rgb(184, 184, 230), rgb(199, 227, 236), rgb(189, 189, 224)); 
 }
 img {
-    width: 50px; height: 40px;
-    margin: 0 15px 0 200px;
+    width: 40px; height: 40px;
+    margin: 0 20px 0 20px;
     border-radius: 50%;
     float: left;
 }
 h1 {
     color: rgb(133, 67, 67);
-    text-shadow: 1px 2px 2px rgb(21, 21, 21);
+    text-shadow: 1px -2px 2px rgb(21, 21, 21);
 }
 section {
     font-size: 80%;
-    margin: 30px;
+    margin: 20px;
     line-height: 150%;
 }
 button {
-    background: linear-gradient(90deg, lightblue, rgb(212, 97, 117));
-    border: solid rgb(185, 75, 93);
+    background: linear-gradient(90deg, rgb(238, 150, 165), rgb(172, 216, 230), rgb(233, 150, 164));
+    border: 1px solid rgb(182, 96, 110);
     border-radius: 2px;
-    box-shadow: 2px 2px 2px;
-    margin: 0 10px 10px 10px;
+    margin: 10px 10px 0 20px;
+    padding: 4px 10px 3px 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 1);
+}
+button:hover {
+    background: linear-gradient(90deg, rgb(238, 150, 165), rgb(172, 216, 230), rgb(233, 150, 164));
+    border: 1px solid rgb(182, 96, 110);
+    border-radius: 2px;
+    margin: 10px 10px 0 20px;
+    padding: 4px 10px 3px 10px;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 1);
+    cursor: pointer;
 }
 button:active {
-    background: linear-gradient(90deg, lightblue, rgb(212, 97, 117));
-    border: solid rgb(185, 75, 93);
+    background: linear-gradient(90deg, rgb(238, 150, 165), rgb(172, 216, 230), rgb(233, 150, 164));
+    border: 1px solid rgb(182, 96, 110);
     border-radius: 2px;
-    box-shadow: 2px 2px 2px;
-    transform: translate(2px, 2px);
+    margin: 10px 10px 0 20px;
+    padding: 4px 10px 3px 10px;
+    box-shadow: 0 -5px 7px rgba(0, 0, 0, 1);
+    transform: translate(2px, 0);
+    transition-duration: .2s;
+}
+button.selected{
+    background: linear-gradient(90deg, rgb(167, 162, 163), rgb(172, 216, 230), rgb(153, 150, 150));
+    border: 1px solid rgb(182, 96, 110);
+    border-radius: 2px;
+    margin: 10px 10px 0 20px;
+    padding: 4px 10px 3px 10px;
+    box-shadow: 0 -5px 7px rgba(0, 0, 0, 1);
+    transform: translate(2px, 0);  
 }
