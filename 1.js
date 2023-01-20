@@ -1,9 +1,9 @@
-function insert(id, buttonId) {
-    for (item of ["about", "calc", "contact"]) {
+function insert(contentId, buttonId) {
+    for (item of ["about", "calc", "tableButton", "contact"]) {
         document.getElementById(item).classList.remove('selected');
     }
     document.getElementById(buttonId).classList.add('selected');
-    document.getElementById("section1").innerHTML = document.getElementById(id).innerHTML
+    document.getElementById("section1").innerHTML = document.getElementById(contentId).innerHTML
 }
 
 let array = []

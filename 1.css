@@ -18,7 +18,7 @@ section {
     line-height: 150%;
 }
 button {
-    color: rgb(89, 57, 18);
+    color: rgb(100, 59, 8);
     font-weight: bold;
     background: linear-gradient(90deg, rgb(238, 150, 165), rgb(172, 216, 230), rgb(233, 150, 164));
     border: 1px solid rgb(182, 96, 110);
@@ -37,6 +37,7 @@ button:active {
     transition-duration: .2s;
 }
 button.selected {
+    background: linear-gradient(90deg, rgb(167, 162, 163), rgb(172, 216, 230), rgb(153, 150, 150));
     box-shadow: 0 -5px 7px rgba(0, 0, 0, 1);
     transform: translate(2px, 0);  
 }
