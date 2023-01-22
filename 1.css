@@ -2,8 +2,23 @@ body {
     zoom: 2;
     background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(209, 209, 242)); 
 }
+header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(209, 209, 242)); 
+}
+nav {
+    position: sticky;
+    top: 40px;
+    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(209, 209, 242)); 
+}
+hr {
+    position: sticky;
+    top: 73px;
+    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(209, 209, 242)); 
+}
 img {
-    width: 40px; height: 40px;
+    width: 50px; height: 40px;
     margin: 0 20px 0 20px;
     border-radius: 50%;
     float: left;
@@ -11,6 +26,7 @@ img {
 h1 {
     color: rgb(133, 67, 67);
     text-shadow: 1px -2px 2px rgb(21, 21, 21);
+    height: 40px;
 }
 section {
     font-size: 80%;
@@ -20,7 +36,7 @@ section {
 input {
     zoom: 0.75;
 }
-.asd {
+.calc {
     position: absolute;
     left: 30px;
 }
@@ -30,7 +46,7 @@ button {
     background: linear-gradient(90deg, rgb(238, 150, 165), rgb(172, 216, 230), rgb(233, 150, 164));
     border: 1px solid rgb(182, 96, 110);
     border-radius: 2px;
-    margin: 10px 10px 0 20px;
+    margin: 5px 10px 5px 20px;
     padding: 4px 10px 3px 10px;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 1);
 }

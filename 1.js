@@ -8,7 +8,7 @@ function insert(contentId, buttonId) {
     document.getElementById("section1").innerHTML = document.getElementById(contentId).innerHTML
 }
 
-function addPet() {
+function addPet() {   
     let pet = {
                 "kindIn": "kindStr", 
                 "nameIn": "nameStr", 
@@ -17,19 +17,16 @@ function addPet() {
                }
     let pet1 = []
     let i = 0
-    document.getElementById("tableBody").innerHTML = `
-    <tr>
-        <th id="kindStr"></th>
-        <th id="nameStr"></th>
-        <th id="colorStr"></th>
-        <th id="weightStr"></th>
-    </tr>
-    `
+    let tr = document.createElement('tr') 
+    document.getElementById("tableBody").append(tr) 
     for (it of ["kindIn", "nameIn", "colorIn", "weightIn"]) {
+        let td = document.createElement('td') 
+        tr.append(td) 
+        td.id = pet[it]
         pet1[i] = document.getElementById(it).value
         document.getElementById(it).value = ''
-        document.getElementById(pet[it]).innerHTML = pet1[i]
-        i=i+1
+        td.innerHTML = pet1[i]
+        i++
     }
 }
 

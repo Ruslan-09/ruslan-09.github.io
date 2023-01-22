@@ -6,7 +6,7 @@
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script>
 			$(function(){
-				$("#icluded").load("2.html");
+				$("#included").load("2.html");
 			});
 		</script>
 	</head>
@@ -25,11 +25,11 @@
 		<section id="section1"></section>
 
 		<div id="paragraph1" style="display: none;">
-			<div id="icluded"></div>
+			<div id="included"></div>
 		</div>
 
 		<div id="calculation" style="display: none;">
-			<div class="asd" style="text-align: center;">
+			<div class="calc" style="text-align: center;">
 				<h2>Input numbers</h2> 
 				<input type="number" id="number" placeholder="Write" value=""><br><br>                                
 				<button type="button" onclick="add()">Add number</button> 
@@ -49,7 +49,7 @@
 			<input id="colorIn" type="text" placeholder="Color">
 			<input id="weightIn" type="number" placeholder="Weight in Kg">
 			<button id="addButton" onclick="addPet()">Add</button><br><br>
-			<table border="1" style="color: rgb(107, 76, 36); width: 350px; border: solid rgb(106, 92, 10) 1px;">
+			<table border="1" cellspace="0,5" style="color: rgb(107, 76, 36); width: 350px; border: solid rgb(106, 92, 10) 1px;">
 				<thead>
 					<tr>
 						<th colspan="4">My pets</th>
@@ -61,8 +61,7 @@
 						<th>Weight</th>
 					</tr>
 				</thead>
-				<tbody id="tableBody">
-				</tbody>
+				<tbody id="tableBody"></tbody>
 			</table>
 
 		</div>
