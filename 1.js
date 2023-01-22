@@ -1,3 +1,5 @@
+let array = []
+
 function insert(contentId, buttonId) {
     for (item of ["about", "calc", "tableButton", "contact"]) {
         document.getElementById(item).classList.remove('selected');
@@ -6,7 +8,30 @@ function insert(contentId, buttonId) {
     document.getElementById("section1").innerHTML = document.getElementById(contentId).innerHTML
 }
 
-let array = []
+function addPet() {
+    let pet = {
+                "kindIn": "kindStr", 
+                "nameIn": "nameStr", 
+                "colorIn": "colorStr", 
+                "weightIn": "weightStr"
+               }
+    let pet1 = []
+    let i = 0
+    document.getElementById("tableBody").innerHTML = `
+    <tr>
+        <th id="kindStr"></th>
+        <th id="nameStr"></th>
+        <th id="colorStr"></th>
+        <th id="weightStr"></th>
+    </tr>
+    `
+    for (it of ["kindIn", "nameIn", "colorIn", "weightIn"]) {
+        pet1[i] = document.getElementById(it).value
+        document.getElementById(it).value = ''
+        document.getElementById(pet[it]).innerHTML = pet1[i]
+        i=i+1
+    }
+}
 
 function add(){
 	let number = document.getElementById("number").value

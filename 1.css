@@ -17,6 +17,13 @@ section {
     margin: 20px;
     line-height: 150%;
 }
+input {
+    zoom: 0.75;
+}
+.asd {
+    position: absolute;
+    left: 30px;
+}
 button {
     color: rgb(100, 59, 8);
     font-weight: bold;
@@ -33,11 +40,13 @@ button:hover {
 }
 button:active {
     box-shadow: 0 -5px 7px rgba(0, 0, 0, 1);
-    transform: translate(2px, 0);
+    transform: translate(0, 2px);
+    zoom: 99%;
     transition-duration: .2s;
 }
 button.selected {
     background: linear-gradient(90deg, rgb(167, 162, 163), rgb(172, 216, 230), rgb(153, 150, 150));
     box-shadow: 0 -5px 7px rgba(0, 0, 0, 1);
-    transform: translate(2px, 0);  
+    transform: translate(0, 2px);  
+    zoom: 99%;
 }

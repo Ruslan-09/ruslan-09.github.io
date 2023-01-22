@@ -1,83 +1,78 @@
 <!DOCTYPE html> 
 <html>
-<head>
-	<title>My webpage</title>
-	<link rel="stylesheet" href="1.css">
-	<script src="1.js"></script>
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<script>
-	    $(function(){
-		    $("#icluded").load("2.html");
-	    });
-</script>
-</head>
+	<head>
+		<title>My webpage</title>
+		<link rel="stylesheet" href="1.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+			$(function(){
+				$("#icluded").load("2.html");
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<img src="icon.jpg">
+			<h1>Ruslan Bairamuk</h1>
+		</header>
+		<nav>
+			<button id="about" onclick="insert('paragraph1', 'about')">About Me</button>
+			<button id="calc" onclick="insert('calculation', 'calc')">My works</button>
+			<button id="tableButton" onclick="insert('table', 'tableButton')">My table</button>
+			<button id="contact" onclick="insert('contacts', 'contact')">Contact Me</button>
+		</nav>
+		<hr size="0,5">
+		<section id="section1"></section>
 
-<body>
-	<header>
-		<img src="icon.jpg">
-		<h1>Ruslan Bairamuk</h1>
-	</header>
-	<nav>
-		<button id="about" onclick="insert('paragraph1', 'about')">About Me</button>
-		<button id="calc" onclick="insert('calculation', 'calc')">My works</button>
-		<button id="tableButton" onclick="insert('table', 'tableButton')">My table</button>
-		<button id="contact" onclick="insert('contacts', 'contact')">Contact Me</button>
-	</nav>
-	<hr size="0,5">
-	<section id="section1"></section>
+		<div id="paragraph1" style="display: none;">
+			<div id="icluded"></div>
+		</div>
 
-	<div id="paragraph1" style="display: none;">
-		<div id="icluded"></div>
-	</div>
+		<div id="calculation" style="display: none;">
+			<div class="asd" style="text-align: center;">
+				<h2>Input numbers</h2> 
+				<input type="number" id="number" placeholder="Write" value=""><br><br>                                
+				<button type="button" onclick="add()">Add number</button> 
+				<button type="button" onclick="calc()">Calculate Avarage</button><br> 
+				<button type="button" onclick="max()">Get max</button> 
+				<button type="button" onclick="min()">Get min</button> 
+				<h4 id="array"></h4>      
+				<p id="avarage"></p>
+				<p id="maxValue"></p>
+				<p id="minValue"></p> 
+			</div>
+		</div>
 
-	<div id="calculation" style="display: none;">
-		<div style="text-align: center; margin: 0 350px 0 0;">
-		<h2>Input numbers</h2> 
-		<input type="number" id="number" placeholder="Write" value=""><br><br>                                
-		<button type="button" onclick="add()">Add number</button> 
-		<button type="button" onclick="calc()">Calculate Avarage</button><br> 
-		<button type="button" onclick="max()">Get max</button> 
-		<button type="button" onclick="min()">Get min</button> 
-		<h4 id="array"></h4>      
-		<p id="avarage"></p>
-		<p id="maxValue"></p>
-		<p id="minValue"></p> 
-	    </div>
-    </div>
+		<div id="table" style="display: none;">
+			<input id="kindIn" type="text" placeholder="Kind of pet">
+			<input id="nameIn" type="text" placeholder="Name"><br>
+			<input id="colorIn" type="text" placeholder="Color">
+			<input id="weightIn" type="number" placeholder="Weight in Kg">
+			<button id="addButton" onclick="addPet()">Add</button><br><br>
+			<table border="1" style="color: rgb(107, 76, 36); width: 350px; border: solid rgb(106, 92, 10) 1px;">
+				<thead>
+					<tr>
+						<th colspan="4">My pets</th>
+					</tr>
+					<tr>
+						<th>Kind</th>
+						<th>Name</th>
+						<th>Color</th>
+						<th>Weight</th>
+					</tr>
+				</thead>
+				<tbody id="tableBody">
+				</tbody>
+			</table>
 
-	<div id="table" style="display: none;">
-		<table border="1" style="color: rgb(107, 76, 36); width: 350px; border: solid rgb(106, 92, 10) 1px;">
-			<caption style="font-weight: bold; ;">My table</caption>
-			<thead>
-				<tr>
-					<th colspan="3">Header</th>
-				</tr>
-			</thead>
-			<tbody>
-			    <tr>
-				    <th>1</th>
-				    <th>2</th>
-				    <th>3</th>
-			    </tr>
-			    <tr>
-				    <td>ABC</td>
-				    <td>ABC</td>
-				    <td>ABC</td>
-			    </tr>
-			    <tr>
-				    <td>&nbsp</td>
-				    <td>&nbsp</td>
-				    <td>&nbsp</td>
-			    </tr>
-		    </tbody>
-		</table>
+		</div>
 
-	</div>
+		<div id="contacts" style="display: none;">
+			Adress: 3225. Sokak, Ciftlikkoy, Yenisehir, Mersin. <br>
+			Tel.: +90-536-017-33-98<br>
+			E-mail: JohnSmithAndCo@gmail.com <br>
+		</div>
 
-	<div id="contacts" style="display: none;">
-		Adress: 3225. Sokak, Ciftlikkoy, Yenisehir, Mersin. <br>
-		Tel.: +90-536-017-33-98<br>
-		E-mail: JohnSmithAndCo@gmail.com <br>
-	</div>
-</body> 
+		<script src="1.js"></script>
+	</body> 
 </html>
