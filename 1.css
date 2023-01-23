@@ -40,6 +40,12 @@ input {
     position: absolute;
     left: 30px;
 }
+button.table {
+    background: none;
+    border: none;
+    margin: 0 10px 10px 10px;
+    box-shadow: none;
+}
 button {
     color: rgb(100, 59, 8);
     font-weight: bold;
