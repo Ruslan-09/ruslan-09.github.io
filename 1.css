@@ -1,21 +1,21 @@
 body {
     zoom: 2;
-    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(209, 209, 242)); 
+    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(200, 200, 240)); 
 }
 header {
     position: sticky;
     top: 0;
-    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(209, 209, 242)); 
+    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(200, 200, 240)); 
 }
 nav {
     position: sticky;
     top: 40px;
-    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(209, 209, 242)); 
+    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(200, 200, 240)); 
 }
 hr {
     position: sticky;
     top: 73px;
-    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(209, 209, 242)); 
+    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(200, 200, 240)); 
 }
 img {
     width: 50px; height: 40px;
@@ -37,15 +37,25 @@ input {
     zoom: 0.75;
 }
 .calc {
-    position: absolute;
-    left: 30px;
+    position: relative;
+    right: 30%;
 }
-button.table {
+button.table123 {
     background: none;
     border: none;
     margin: 0 10px 10px 10px;
     box-shadow: none;
 }
+button.table {
+    margin: 0;
+}
+table.t3 td:last-child {
+    border: none;
+    text-align: left;
+}
+th, td {
+    border: 1px solid rgb(24, 23, 23)
+   }
 button {
     color: rgb(100, 59, 8);
     font-weight: bold;

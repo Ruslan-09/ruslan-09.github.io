@@ -45,8 +45,10 @@
 		</div>
 
 		<div id="tables" style="display: none;">
-			<button id="tableButton1" onclick="insertTable('table1')" class="table">Table 1</button>
-			<button id="tableButton2" onclick="insertTable('table2')" class="table">Table 2</button>
+			<button id="tableButton1" onclick="insertTable('table1')" class="table123">Table 1</button>
+			<button id="tableButton2" onclick="insertTable('table2')" class="table123">Table 2</button>
+			<button id="tableButton3" onclick="insertTable('table3')" class="table123">Table 3</button>
+			
 			<div id="tables1"></div>
 
 			<div id="table1" style="display: none;">
@@ -90,6 +92,30 @@
 							<td><input id="nameInput2" type="text"></td>
 							<td><input id="colorInput2" type="text"></td>
 							<td><input id="weightInput2" type="number"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="table3" style="display: none;">
+				<table class="t3" style="border-spacing: 1px 2px; text-align: center; color: rgb(107, 76, 36)">
+					<thead>
+						<tr>
+							<th colspan="4">My pets</th>
+						</tr>
+						<tr>
+							<th>Kind</th>
+							<th>Name</th>
+							<th>Color</th>
+							<th>Weight</th>
+						</tr>
+					</thead>
+					<tbody id="tableBody3">
+						<tr>
+							<td><input id="kindInput3" type="text"></td>
+							<td><input id="nameInput3" type="text"></td>
+							<td><input id="colorInput3" type="text"></td>
+							<td><input id="weightInput3" type="number"></td>
+							<td><button id="addButton3" onclick="addPet3()" class="table">Add</button></td>
 						</tr>
 					</tbody>
 				</table>

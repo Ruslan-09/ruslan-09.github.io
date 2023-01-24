@@ -1,10 +1,11 @@
 let array = []
+let x = 0
 
 function insertContent(contentId, buttonId) {
     for (item of ["about", "calc", "tableButton", "contact"]) {
-        document.getElementById(item).classList.remove('selected');
+        document.getElementById(item).classList.remove('selected')
     }
-    document.getElementById(buttonId).classList.add('selected');
+    document.getElementById(buttonId).classList.add('selected')
     document.getElementById("section1").innerHTML = document.getElementById(contentId).innerHTML
 }
 
@@ -56,6 +57,38 @@ function addPet2() {
         td.innerHTML = pet1[i]
         i++
     }
+}
+function addPet3() {   
+    let pet = {
+                "kindInput3": "kindStr", 
+                "nameInput3": "nameStr", 
+                "colorInput3": "colorStr", 
+                "weightInput3": "weightStr"
+               }
+    let pet1 = []
+    let i = 0
+    let tr = document.createElement('tr') 
+    document.getElementById("tableBody3").append(tr) 
+    for (it of ["kindInput3", "nameInput3", "colorInput3", "weightInput3"]) {
+        let td = document.createElement('td') 
+        tr.append(td) 
+        td.id = pet[it]
+        td.innerHTML = document.getElementById(it)
+        pet1.push(document.getElementById(it).value) 
+        document.getElementById(it).value = ''
+        td.innerHTML = pet1[i]
+        i++
+    }
+    x++
+    let td = document.createElement('td') 
+    tr.id = 'newLine'+x
+    td.id = 'newBox'+x
+    let but = document.createElement('button') 
+    but.innerHTML = 'Remove'
+    but.setAttribute("onclick", "this.parentElement.parentElement.remove()")
+    but.classList.add('table')
+    document.getElementById('newLine'+x).append(td) 
+    document.getElementById('newBox'+x).append(but) 
 }
 
 function addNumber() {
