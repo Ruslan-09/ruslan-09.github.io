@@ -37,7 +37,7 @@ button:active {
     transition-duration: .2s;
 }
 button.selected {
-    background: linear-gradient(90deg, rgb(83, 108, 178), rgb(57, 112, 129), rgb(48, 56, 128));
+    background: linear-gradient(90deg, rgb(134, 150, 192), rgb(122, 152, 161), rgb(68, 76, 142));
     box-shadow: 0 -5px 7px rgba(0, 0, 0, 1);
     transform: translate(0, 2px);  
     zoom: 99%;

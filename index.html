@@ -11,6 +11,9 @@
 			$(function(){
 				$("#included").load("aboutMe.html");
 			});
+			$(function(){
+				$("#contacts").load("contacts.html");
+			});
 		</script>
 	</head>
 	<body>
@@ -29,7 +32,6 @@
 		<section id="section1"></section>
 
 		<div id="paragraph1" style="display: none;">
-			<div id="included"></div>
 			<div id="included"></div>
 		</div>
 
@@ -86,22 +88,19 @@
 				</table>
 	    </div>
 
-		<div id="contacts" style="display: none;">
-			Adress: 3225. Sokak, Ciftlikkoy, Yenisehir, Mersin. <br>
-			Tel.: +90-536-017-33-98<br>
-			E-mail: Ruslan.Bairamuk.09@gmail.com <br>
-		</div>
+		<div id="contacts" style="display: none;"></div>
 
 		<div class="dropdown">
 			<div class="dropbtn0">
-				<div class="dropbtn">En</div>
+				<div id="lang" class="dropbtn"><img src="en.png" class="langIcon">En</div>
 				<div class="dropdown-content">
-					<a href="#">En</a>
-					<a href="#">Ru</a>
+					<a href="#"><img src="en.png" class="langIcon">En</a>
+					<a href="indexRu.html"><img src="ru.png" class="langIcon">Ru</a>
 				</div>
 			</div>
 		</div>
 
 		<script src="js/index.js"></script>
+		<script src="js/const.js"></script>
 	</body> 
 </html>

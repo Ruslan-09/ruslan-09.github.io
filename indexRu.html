@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Моя страница</title>
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/table.css">
+		<link rel="stylesheet" href="css/buttons.css">
+		<link rel="stylesheet" href="css/lang.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+			$(function(){
+				$("#included").load("aboutMeRu.html");
+			});
+			$(function(){
+				$("#contacts").load("contactsRu.html");
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<img src="iconRu.jpg">
+			<h1>Руслан Байрамуков</h1>
+		</header>
+		<nav>
+			<button id="about" onclick="insertContent('paragraph1', 'about')">Обо мне</button>
+			<button id="calc" onclick="insertContent('calculation', 'calc')">Калькулятор</button>
+			<button id="tableButton" onclick="insertContent('tables', 'tableButton')">Таблица</button>
+			<button id="contact" onclick="insertContent('contacts', 'contact')">Мои контакты</button>
+		</nav>
+		<hr size="0,5">
+
+		<section id="section1"></section>
+
+		<div id="paragraph1" style="display: none;">
+			<div id="included"></div>
+		</div>
+
+		<div id="calculation" style="display: none;">
+			<div class="calculation" style="text-align: center;">
+				<input type="number" id="number" placeholder="Введите числа" value=""><br><br>                                
+				<button type="button" class="calc" onclick="addNumber()">Добавить</button> 
+				<button type="button" class="calc" onclick="calc()">Среднее</button><br> 
+				<button type="button" class="calc" onclick="max()">Максимум</button> 
+				<button type="button" class="calc" onclick="min()">Минимум</button> 
+				<h4 id="array"></h4>      
+				<p id="avarage"></p>
+				<p id="maxValue"></p>
+				<p id="minValue"></p> 
+			</div>
+		</div>
+
+		<div id="tables" style="display: none;">
+				<table class="t3">
+					<thead>
+						<tr>
+							<th colspan="4">Мои питомцы</th>
+						</tr>
+						<tr>
+							<th>Вид</th>
+							<th>Имя</th>
+							<th>Цвет</th>
+							<th>Вес, кг</th>
+						</tr>
+					</thead>
+					<tbody id="tableBody3">
+						<tr>
+							<td><input id="kindInput3" type="text"></td>
+							<td><input id="nameInput3" type="text"></td>
+							<td><input id="colorInput3" type="text"></td>
+							<td><input id="weightInput3" type="number"></td>
+							<td><button id="addButton3" onclick="addPet()" class="table" style="width: 81px;">Вставка</button></td>
+						</tr>
+						<tr>
+							<td>Kitty</td>
+							<td>Roxxy</td>
+							<td>White-black</td>
+							<td>1.3</td>
+							<td><button id="addButton3" onclick="this.parentElement.parentElement.remove()" class="table" style="width: 81px;">Удалить</button></td>
+						</tr>
+						<tr>
+							<td>Puppy</td>
+							<td>Teddy</td>
+							<td>Gray</td>
+							<td>2.6</td>
+							<td><button id="addButton3" onclick="this.parentElement.parentElement.remove()" class="table" style="width: 81px;">Удалить</button></td>
+						</tr>
+					</tbody>
+				</table>
+	    </div>
+
+		<div id="contacts" style="display: none;"></div>
+
+		<div class="dropdown">
+			<div class="dropbtn0">
+				<div id="lang" class="dropbtn"><img src="ru.png" class="langIcon">Ru</div>
+				<div class="dropdown-content">
+					<a href="index.html"><img src="en.png" class="langIcon">En</a>
+					<a href="#"><img src="ru.png" class="langIcon">Ru</a>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/index.js"></script>
+		<script src="js/const.js"></script>
+	</body> 
+</html>
