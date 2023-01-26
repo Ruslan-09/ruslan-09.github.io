@@ -1,0 +1,50 @@
+.dropdown {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    zoom: 0.6;
+}
+.dropbtn0 {
+    padding-left: 5px;
+    box-shadow: 2px -2px 4px rgb(85, 100, 150);
+    border-radius: 5px;
+}
+.dropbtn {
+    padding: 5px 5px 5px 20px;
+    cursor: pointer;
+    background: url('https://icons.iconarchive.com/icons/fatcow/farm-fresh/16/flag-usa-icon.png') no-repeat left center;
+    width: 40px;
+}
+.dropdown-content {
+    display: none;
+}
+.dropbtn::after {
+    background: rgba(0, 0, 0, 0) url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-16.png") no-repeat scroll center center;
+    content: "";
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 16px;
+}
+.dropdown-content a:first-child {
+  background: url('https://icons.iconarchive.com/icons/fatcow/farm-fresh/16/flag-usa-icon.png') no-repeat left center;
+}
+.dropdown-content a:last-child {
+  background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
+}
+.dropdown-content a {
+    color: black;
+    padding: 2px 0 2px 25px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #c3baba54;
+}
+.dropdown:hover .dropbtn {
+    zoom: 1.1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}

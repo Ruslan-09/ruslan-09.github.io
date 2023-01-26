@@ -1,16 +1,16 @@
 body {
-    zoom: 2;
-    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(200, 200, 240)); 
+    zoom: 1.8;
+    background: linear-gradient(270deg, rgb(210, 210, 243), rgb(232, 238, 240), rgb(213, 213, 243)); 
 }
 header {
     position: sticky;
     top: 0;
-    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(200, 200, 240)); 
+    background: linear-gradient(270deg, rgb(210, 210, 243), rgb(232, 238, 240), rgb(213, 213, 243)); 
 }
 nav {
     position: sticky;
     top: 40px;
-    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(200, 200, 240)); 
+    background: linear-gradient(270deg, rgb(210, 210, 243), rgb(232, 238, 240), rgb(213, 213, 243)); 
 }
 hr {
     position: sticky;
@@ -22,11 +22,17 @@ img {
     margin: 0 20px 0 20px;
     border-radius: 50%;
     float: left;
+    box-shadow: 2px -2px 4px rgb(85, 100, 150);
 }
 h1 {
-    color: rgb(133, 67, 67);
-    text-shadow: 1px -2px 2px rgb(21, 21, 21);
+    color: rgb(122, 100, 100);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 40px;
+    text-shadow: 1px -2px 2px black;
+}
+h2 {
+    color: rgb(128, 100, 100);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 section {
     font-size: 80%;
@@ -34,51 +40,10 @@ section {
     line-height: 150%;
 }
 input {
-    zoom: 0.75;
+    padding: 0;
+    width: 140px; height: 20px;
 }
-.calc {
+.calculation {
     position: relative;
     right: 30%;
-}
-button.table123 {
-    background: none;
-    border: none;
-    margin: 0 10px 10px 10px;
-    box-shadow: none;
-}
-button.table {
-    margin: 0;
-}
-table.t3 td:last-child {
-    border: none;
-    text-align: left;
-}
-th, td {
-    border: 1px solid rgb(24, 23, 23)
-   }
-button {
-    color: rgb(100, 59, 8);
-    font-weight: bold;
-    background: linear-gradient(90deg, rgb(238, 150, 165), rgb(172, 216, 230), rgb(233, 150, 164));
-    border: 1px solid rgb(182, 96, 110);
-    border-radius: 2px;
-    margin: 5px 10px 5px 20px;
-    padding: 4px 10px 3px 10px;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 1);
-}
-button:hover {
-    box-shadow: 0 -3px 5px rgba(0, 0, 0, 1);
-    cursor: pointer;
-}
-button:active {
-    box-shadow: 0 -5px 7px rgba(0, 0, 0, 1);
-    transform: translate(0, 2px);
-    zoom: 99%;
-    transition-duration: .2s;
-}
-button.selected {
-    background: linear-gradient(90deg, rgb(167, 162, 163), rgb(172, 216, 230), rgb(153, 150, 150));
-    box-shadow: 0 -5px 7px rgba(0, 0, 0, 1);
-    transform: translate(0, 2px);  
-    zoom: 99%;
 }

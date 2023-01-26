@@ -3,6 +3,9 @@
 	<head>
 		<title>My webpage</title>
 		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/table.css">
+		<link rel="stylesheet" href="css/buttons.css">
+		<link rel="stylesheet" href="css/lang.css">
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script>
 			$(function(){
@@ -17,8 +20,8 @@
 		</header>
 		<nav>
 			<button id="about" onclick="insertContent('paragraph1', 'about')">About Me</button>
-			<button id="calc" onclick="insertContent('calculation', 'calc')">My works</button>
-			<button id="tableButton" onclick="insertContent('tables', 'tableButton')">My tables</button>
+			<button id="calc" onclick="insertContent('calculation', 'calc')">Calculator</button>
+			<button id="tableButton" onclick="insertContent('tables', 'tableButton')">Interactive table</button>
 			<button id="contact" onclick="insertContent('contacts', 'contact')">Contact Me</button>
 		</nav>
 		<hr size="0,5">
@@ -31,13 +34,12 @@
 		</div>
 
 		<div id="calculation" style="display: none;">
-			<div class="calc" style="text-align: center;">
-				<h2>Input numbers</h2> 
-				<input type="number" id="number" placeholder="Write" value=""><br><br>                                
-				<button type="button" onclick="addNumber()">Add number</button> 
-				<button type="button" onclick="calc()">Calculate Avarage</button><br> 
-				<button type="button" onclick="max()">Get max</button> 
-				<button type="button" onclick="min()">Get min</button> 
+			<div class="calculation" style="text-align: center;">
+				<input type="number" id="number" placeholder="Input numbers" value=""><br><br>                                
+				<button type="button" class="calc" onclick="addNumber()">Add number</button> 
+				<button type="button" class="calc" onclick="calc()">Find Avarage</button><br> 
+				<button type="button" class="calc" onclick="max()">Get max</button> 
+				<button type="button" class="calc" onclick="min()">Get min</button> 
 				<h4 id="array"></h4>      
 				<p id="avarage"></p>
 				<p id="maxValue"></p>
@@ -46,19 +48,7 @@
 		</div>
 
 		<div id="tables" style="display: none;">
-			<button id="tableButton1" onclick="insertTable('table1')" class="table123">Table 1</button>
-			<button id="tableButton2" onclick="insertTable('table2')" class="table123">Table 2</button>
-			<button id="tableButton3" onclick="insertTable('table3')" class="table123">Table 3</button>
-			
-			<div id="tables1"></div>
-
-			<div id="table1" style="display: none;">
-				<input id="kindIn" type="text" placeholder="Kind of pet">
-				<input id="nameIn" type="text" placeholder="Name"><br>
-				<input id="colorIn" type="text" placeholder="Color">
-				<input id="weightIn" type="number" placeholder="Weight in Kg">
-				<button id="addButton" onclick="addPet()">Add</button><br><br>
-				<table border="1" cellspace="0,5" style="text-align: center; color: rgb(107, 76, 36); width: 450px">
+				<table class="t3">
 					<thead>
 						<tr>
 							<th colspan="4">My pets</th>
@@ -67,47 +57,7 @@
 							<th>Kind</th>
 							<th>Name</th>
 							<th>Color</th>
-							<th>Weight</th>
-						</tr>
-					</thead>
-					<tbody id="tableBody"></tbody>
-				</table>
-			</div>
-			<div id="table2" style="display: none;">
-				<button id="addButton2" onclick="addPet2()">Add</button><br>
-				<table border="1" cellspace="0,5" style="text-align: center; color: rgb(107, 76, 36)">
-					<thead>
-						<tr>
-							<th colspan="4">My pets</th>
-						</tr>
-						<tr>
-							<th>Kind</th>
-							<th>Name</th>
-							<th>Color</th>
-							<th>Weight</th>
-						</tr>
-					</thead>
-					<tbody id="tableBody2">
-						<tr>
-							<td><input id="kindInput2" type="text"></td>
-							<td><input id="nameInput2" type="text"></td>
-							<td><input id="colorInput2" type="text"></td>
-							<td><input id="weightInput2" type="number"></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div id="table3" style="display: none;">
-				<table class="t3" style="border-spacing: 0.5px; text-align: center; color: rgb(107, 76, 36)">
-					<thead>
-						<tr>
-							<th colspan="4">My pets</th>
-						</tr>
-						<tr>
-							<th>Kind</th>
-							<th>Name</th>
-							<th>Color</th>
-							<th>Weight</th>
+							<th>Weight, Kg</th>
 						</tr>
 					</thead>
 					<tbody id="tableBody3">
@@ -116,21 +66,42 @@
 							<td><input id="nameInput3" type="text"></td>
 							<td><input id="colorInput3" type="text"></td>
 							<td><input id="weightInput3" type="number"></td>
-							<td><button id="addButton3" onclick="addPet3()" class="table">Add</button></td>
+							<td><button id="addButton3" onclick="addPet()" class="table" style="width: 81px;">Add</button></td>
+						</tr>
+						<tr>
+							<td>Kitty</td>
+							<td>Roxxy</td>
+							<td>White-black</td>
+							<td>1.3</td>
+							<td><button id="addButton3" onclick="this.parentElement.parentElement.remove()" class="table" style="width: 81px;">Remove</button></td>
+						</tr>
+						<tr>
+							<td>Puppy</td>
+							<td>Teddy</td>
+							<td>Gray</td>
+							<td>2.6</td>
+							<td><button id="addButton3" onclick="this.parentElement.parentElement.remove()" class="table" style="width: 81px;">Remove</button></td>
 						</tr>
 					</tbody>
 				</table>
-			</div>
 	    </div>
 
 		<div id="contacts" style="display: none;">
 			Adress: 3225. Sokak, Ciftlikkoy, Yenisehir, Mersin. <br>
 			Tel.: +90-536-017-33-98<br>
-			E-mail: JohnSmithAndCo@gmail.com <br>
+			E-mail: Ruslan.Bairamuk.09@gmail.com <br>
+		</div>
+
+		<div class="dropdown">
+			<div class="dropbtn0">
+				<div class="dropbtn">En</div>
+				<div class="dropdown-content">
+					<a href="#">En</a>
+					<a href="#">Ru</a>
+				</div>
+			</div>
 		</div>
 
 		<script src="js/index.js"></script>
-		<script src="js/array.js"></script>
-		<script src="js/table.js"></script>
 	</body> 
 </html>
