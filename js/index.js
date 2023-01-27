@@ -31,7 +31,11 @@ function addPet() {
     tr.id = 'newLine'+x
     td.id = 'newBox'+x
     let but = document.createElement('button') 
-    but.innerHTML = 'Remove'
+        if (document.getElementById('langSwitcher').innerHTML === 'En') {
+            but.innerHTML = 'Remove'
+        } else {
+            but.innerHTML = 'Удалить'
+        }
     but.setAttribute("onclick", "this.parentElement.parentElement.remove()")
     but.classList.add('table')
     document.getElementById('newLine'+x).append(td) 
@@ -45,12 +49,16 @@ function addNumber() {
     document.getElementById("number").value = ''
 }
 
-function calc() {
+function calcAvarage() {
     let sum = 0
     for (item of array) {
         sum += item
     }
-    document.getElementById("avarage").innerHTML = "Avarage = " + sum/array.length
+    if (document.getElementById('langSwitcher').innerHTML === 'En') {
+        document.getElementById("avarage").innerHTML = 'Avarage = ' + sum/array.length
+    } else {
+        document.getElementById("avarage").innerHTML = 'Среднее значение = ' + sum/array.length
+    }
 }
 
 function max() {
@@ -60,7 +68,11 @@ function max() {
             maxV = item
         }
     }
-    document.getElementById("maxValue").innerHTML = "Max value = " + maxV
+    if (document.getElementById('langSwitcher').innerHTML === 'En') {
+        document.getElementById("maxValue").innerHTML = 'Max value = ' + maxV
+    } else {
+        document.getElementById("maxValue").innerHTML = 'Максимальное значение = ' + maxV
+    }
 }
 
 function min() {
@@ -70,5 +82,9 @@ function min() {
             minV = item
         }
     }
-    document.getElementById("minValue").innerHTML = "Min value = " + minV
+    if (document.getElementById('langSwitcher').innerHTML === 'En') {
+        document.getElementById("minValue").innerHTML = 'Min value = ' + minV
+    } else {
+        document.getElementById("minValue").innerHTML = 'Минимальное значение = ' + minV
+    }
 }

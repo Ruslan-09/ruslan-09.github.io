@@ -22,10 +22,10 @@
 			<h1>Ruslan Bairamuk</h1>
 		</header>
 		<nav>
-			<button id="about" onclick="insertContent('paragraph1', 'about')">About Me</button>
-			<button id="calc" onclick="insertContent('calculation', 'calc')">Calculator</button>
-			<button id="tableButton" onclick="insertContent('tables', 'tableButton')">Interactive table</button>
-			<button id="contact" onclick="insertContent('contacts', 'contact')">Contact Me</button>
+			<button id="about" class="nav" onclick="insertContent('paragraph1', 'about')">About Me</button>
+			<button id="calc" class="nav" onclick="insertContent('calculation', 'calc')">Calculator</button>
+			<button id="tableButton" class="nav" onclick="insertContent('tables', 'tableButton')">Interactive table</button>
+			<button id="contact" class="nav" onclick="insertContent('contacts', 'contact')">Contact Me</button>
 		</nav>
 		<hr size="0,5">
 
@@ -39,7 +39,7 @@
 			<div class="calculation" style="text-align: center;">
 				<input type="number" id="number" placeholder="Input numbers" value=""><br><br>                                
 				<button type="button" class="calc" onclick="addNumber()">Add number</button> 
-				<button type="button" class="calc" onclick="calc()">Find Avarage</button><br> 
+				<button type="button" class="calc" onclick="calcAvarage()">Find Avarage</button><br> 
 				<button type="button" class="calc" onclick="max()">Get max</button> 
 				<button type="button" class="calc" onclick="min()">Get min</button> 
 				<h4 id="array"></h4>      
@@ -92,7 +92,7 @@
 
 		<div class="dropdown">
 			<div class="dropbtn0">
-				<div id="lang" class="dropbtn"><img src="en.png" class="langIcon">En</div>
+				<div id="lang" class="dropbtn"><img src="en.png" class="langIcon"><p id="langSwitcher" style="margin: 0; padding: 0;">En</p></div>
 				<div class="dropdown-content">
 					<a href="#"><img src="en.png" class="langIcon">En</a>
 					<a href="indexRu.html"><img src="ru.png" class="langIcon">Ru</a>
