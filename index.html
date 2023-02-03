@@ -20,10 +20,20 @@
 		<header>
 			<img src="icon.jpg">
 			<h1>Ruslan Bairamuk</h1>
+			<div class="dropdown">
+				<div class="dropbtn0">
+					<div id="lang" class="dropbtn"><img src="en.png" class="langIcon"><p id="langSwitcher" style="margin: 0; padding: 0;">En</p></div>
+					<div class="dropdown-content">
+						<a href="#"><img src="en.png" class="langIcon">En</a>
+						<a href="indexRu.html"><img src="ru.png" class="langIcon">Ru</a>
+					</div>
+				</div>
+			</div>
 		</header>
 		<nav>
 			<button id="about" class="nav" onclick="insertContent('paragraph1', 'about')">About Me</button>
 			<button id="calc" class="nav" onclick="insertContent('calculation', 'calc')">Calculator</button>
+			<! <button id="converterButton" class="nav" onclick="insertContent('converterDiv', 'converterButton')"> <! Converter</button>
 			<button id="tableButton" class="nav" onclick="insertContent('tables', 'tableButton')">Interactive table</button>
 			<button id="contact" class="nav" onclick="insertContent('contacts', 'contact')">Contact Me</button>
 		</nav>
@@ -49,6 +59,23 @@
 			</div>
 		</div>
 
+		<div id="converterDiv" class="conv" style="display: none;">
+			<button class="table" onclick="convertData()">Convert</button><br>
+			<textarea class="converter" id="converterInput" cols="45" rows="12">
+; comments
+[owner]
+name=John
+organization=APP Inc.
+
+[database]
+; comments
+name=default
+server=192.0.2.62
+file=payroll.dat
+			</textarea>
+			<textarea class="converter" id="converterOutput" cols="45" rows="12"></textarea>
+		</div>	
+
 		<div id="tables" style="display: none;">
 				<table class="t3">
 					<thead>
@@ -68,37 +95,27 @@
 							<td><input id="nameInput3" type="text"></td>
 							<td><input id="colorInput3" type="text"></td>
 							<td><input id="weightInput3" type="number"></td>
-							<td><button id="addButton3" onclick="addPet()" class="table" style="width: 81px;">Add</button></td>
+							<td><button id="addButton3" onclick="addPet()" class="table">Add</button></td>
 						</tr>
 						<tr>
 							<td>Kitty</td>
 							<td>Roxxy</td>
 							<td>White-black</td>
 							<td>1.3</td>
-							<td><button id="addButton3" onclick="this.parentElement.parentElement.remove()" class="table" style="width: 81px;">Remove</button></td>
+							<td><button id="addButton3" onclick="this.parentElement.parentElement.remove()" class="table">Remove</button></td>
 						</tr>
 						<tr>
 							<td>Puppy</td>
 							<td>Teddy</td>
 							<td>Gray</td>
 							<td>2.6</td>
-							<td><button id="addButton3" onclick="this.parentElement.parentElement.remove()" class="table" style="width: 81px;">Remove</button></td>
+							<td><button id="addButton3" onclick="this.parentElement.parentElement.remove()" class="table">Remove</button></td>
 						</tr>
 					</tbody>
 				</table>
 	    </div>
 
 		<div id="contacts" style="display: none;"></div>
-
-		<div class="dropdown">
-			<div class="dropbtn0">
-				<div id="lang" class="dropbtn"><img src="en.png" class="langIcon"><p id="langSwitcher" style="margin: 0; padding: 0;">En</p></div>
-				<div class="dropdown-content">
-					<a href="#"><img src="en.png" class="langIcon">En</a>
-					<a href="indexRu.html"><img src="ru.png" class="langIcon">Ru</a>
-				</div>
-			</div>
-		</div>
 
 		<script src="js/index.js"></script>
 		<script src="js/const.js"></script>

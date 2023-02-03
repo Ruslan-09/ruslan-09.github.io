@@ -44,7 +44,7 @@ function addPet() {
 
 function addNumber() {
 	let number = document.getElementById("number").value
-    array.push(Number(number))
+    array.push(Number(number)) //????
     document.getElementById("array").innerHTML = array
     document.getElementById("number").value = ''
 }
@@ -87,4 +87,25 @@ function min() {
     } else {
         document.getElementById("minValue").innerHTML = 'Минимальное значение = ' + minV
     }
+}
+
+function convertData() {
+
+    let outputJson = {}
+
+    let input = document.getElementById('converterInput').value
+        .split("\n")
+        .filter(it => it.charAt(0) != ';')
+        .filter(it => it != '\t\t\t')
+        .filter(it => it != '')
+        .forEach(it => {
+            if (it.charAt(0) === '[') {
+                console.log(it)
+            } else {
+                outputJson[it.split('=')[0]] = it.split('=')[1]
+                console.log(outputJson)
+            }
+        })
+
+    document.getElementById('converterOutput').innerHTML =  JSON.stringify(outputJson, null, 2)
 }

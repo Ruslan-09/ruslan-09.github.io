@@ -1,38 +1,35 @@
 body {
     zoom: 1.8;
-    background: linear-gradient(270deg, rgb(210, 210, 243), rgb(232, 238, 240), rgb(213, 213, 243)); 
+    background: linear-gradient(220deg, rgb(253, 238, 244), rgb(232, 238, 240)); 
 }
 header {
     position: sticky;
     top: 0;
-    background: linear-gradient(270deg, rgb(210, 210, 243), rgb(232, 238, 240), rgb(213, 213, 243)); 
+    background: linear-gradient(220deg, rgba(253, 238, 244, 0.627), rgb(232, 238, 240)); 
+}
+h1 {
+    color: rgba(21, 20, 20, 0.81);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 40px;
+    text-shadow: 1px -1px 2px rgb(28, 9, 244);
+    float: inline-end;
 }
 nav {
     position: sticky;
     top: 40px;
-    background: linear-gradient(270deg, rgb(210, 210, 243), rgb(232, 238, 240), rgb(213, 213, 243)); 
+    background: linear-gradient(220deg, rgba(253, 238, 244, 0.627), rgb(232, 238, 240)); 
 }
 hr {
     position: sticky;
-    top: 73px;
-    background: linear-gradient(270deg, rgb(194, 194, 232), rgb(215, 232, 238), rgb(200, 200, 240)); 
+    top: 74px;
+    background: linear-gradient(220deg, rgba(253, 238, 244, 0.627), rgb(232, 238, 240)); 
 }
 img {
     width: 50px; height: 40px;
     margin: 0 20px 0 20px;
     border-radius: 50%;
     float: left;
-    box-shadow: 2px -2px 4px rgb(85, 100, 150);
-}
-h1 {
-    color: rgb(122, 100, 100);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 40px;
-    text-shadow: 1px -2px 2px black;
-}
-h2 {
-    color: rgb(128, 100, 100);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 2px -2px 2px rgb(85, 100, 150);
 }
 section {
     font-size: 80%;
@@ -45,5 +42,10 @@ input {
 }
 .calculation {
     position: relative;
-    right: 30%;
+    right: 27%;
+}
+textarea.converter {
+    border: none;
+    box-shadow: -1px 1px 2px rgb(85, 100, 150);
+    margin: 10px 20px 0 0;
 }

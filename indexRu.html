@@ -20,6 +20,15 @@
 		<header>
 			<img src="iconRu.jpg">
 			<h1>Руслан Байрамуков</h1>
+			<div class="dropdown">
+				<div class="dropbtn0">
+					<div id="lang" class="dropbtn"><img src="ru.png" class="langIcon"><p id="langSwitcher" style="margin: 0; padding: 0;">Ru</p></div>
+					<div class="dropdown-content">
+						<a href="index.html"><img src="en.png" class="langIcon">En</a>
+						<a href="#"><img src="ru.png" class="langIcon">Ru</a>
+					</div>
+				</div>
+			</div>
 		</header>
 		<nav>
 			<button id="about" onclick="insertContent('paragraph1', 'about')">Обо мне</button>
@@ -68,37 +77,27 @@
 							<td><input id="nameInput3" type="text"></td>
 							<td><input id="colorInput3" type="text"></td>
 							<td><input id="weightInput3" type="number"></td>
-							<td><button id="addButton3" onclick="addPet()" class="table" style="width: 81px;">Вставка</button></td>
+							<td><button id="addButton3" onclick="addPet()" class="table">Вставка</button></td>
 						</tr>
 						<tr>
 							<td>Кот</td>
 							<td>Пушок</td>
 							<td>Рыжий</td>
 							<td>1.3</td>
-							<td><button id="addButton3" onclick="this.parentElement.parentElement.remove()" class="table" style="width: 81px;">Удалить</button></td>
+							<td><button id="addButton3" onclick="this.parentElement.parentElement.remove()" class="table">Удалить</button></td>
 						</tr>
 						<tr>
 							<td>Пёс</td>
 							<td>Шарик</td>
 							<td>Серый</td>
 							<td>2.6</td>
-							<td><button id="addButton3" onclick="this.parentElement.parentElement.remove()" class="table" style="width: 81px;">Удалить</button></td>
+							<td><button id="addButton3" onclick="this.parentElement.parentElement.remove()" class="table">Удалить</button></td>
 						</tr>
 					</tbody>
 				</table>
 	    </div>
 
 		<div id="contacts" style="display: none;"></div>
-
-		<div class="dropdown">
-			<div class="dropbtn0">
-				<div id="lang" class="dropbtn"><img src="ru.png" class="langIcon"><p id="langSwitcher" style="margin: 0; padding: 0;">Ru</p></div>
-				<div class="dropdown-content">
-					<a href="index.html"><img src="en.png" class="langIcon">En</a>
-					<a href="#"><img src="ru.png" class="langIcon">Ru</a>
-				</div>
-			</div>
-		</div>
 
 		<script src="js/index.js"></script>
 		<script src="js/const.js"></script>
