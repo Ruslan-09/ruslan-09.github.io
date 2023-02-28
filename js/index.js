@@ -44,7 +44,7 @@ function addPet() {
 
 function addNumber() {
 	let number = document.getElementById("number").value
-    array.push(Number(number)) //????
+    array.push(Number(number))
     document.getElementById("array").innerHTML = array
     document.getElementById("number").value = ''
 }

@@ -1,0 +1,231 @@
+body {
+    padding: 0;
+    margin: 0;
+    zoom: 1.6;
+    background-color: rgb(206, 209, 226);
+    caret-color: transparent;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+}
+header {
+    background-color: rgb(206, 209, 226);
+    position: sticky;
+    top: 0;
+}
+h1 {
+    color: rgb(39, 84, 38);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 40px;
+    text-shadow: 2px -2px 2px rgba(12, 2, 117, 0.489);
+    float: inline-end;
+}
+h1 span {
+    color: rgba(77, 44, 32, 0.808);;
+}
+nav {
+    border-right: solid 0.5px;
+    border-color: rgb(128, 128, 128);
+    width: 15%; height: 355px;
+    position: sticky;
+    top: 42px;
+    float: left;
+}
+hr {
+    position: sticky;
+    top: 40px;
+    background: linear-gradient(220deg, rgba(253, 238, 244, 0.627), rgb(232, 238, 240)); 
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.677);
+}
+
+img.logo {
+    width: 50px; height: 40px;
+    margin: 0 20px 0 20px;
+    border-radius: 50%;
+    float: left;
+}
+img.logo:hover {
+    opacity: 80%;
+}
+img.cartImg {
+    position: inherit;
+    height: 65%; width: auto;
+    left: 11%;
+}
+img.pet {
+    height: 100px;
+    width: 100px;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.imageZoomDivWrapper {
+    position: fixed;
+    top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: auto; height: 100%;
+    z-index: 9999999;
+    background-color: rgba(137, 146, 203, 0.923);
+}
+.imageZoom {
+    float: left;
+    position: inherit;
+    top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: auto; height: 95%;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.782);
+    border-radius: 1%;
+}
+.Div {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Div img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.left {
+    float: left;
+    position: relative;
+    left: 0;
+    width: 15%; height: 100%;
+}
+.right {
+    position: inherit;
+    right: 0;
+    width: 15%; height: 100%;
+}
+.Button {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 30%;
+
+}
+.Button:hover {
+    opacity: 100%;
+}
+.Button img {
+    object-fit: contain;
+    width: 30%;
+    height: 30%;
+}
+
+.close {
+    position: inherit;
+    top: 20px;
+    right: 20px;
+    width: auto; height: 5%;
+}
+.Sign {
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+    opacity: 40%;
+}
+.Sign:hover {
+    opacity: 100%;
+}
+
+.wrapper {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 5px;
+}
+.exmpl {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exmpl img {
+    border-radius: 3%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.wrapper1 {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+}
+.exmpl1 {
+    overflow: hidden;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+.exmpl1 img {
+    border-radius: 5%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+figure.pets {
+    border-radius: 3%;
+    display: inline-block;
+    padding: 1px 1px 2px 1px;
+    margin:  10px 30px 10px 30px;
+    width: 100px;
+}
+figure.photo {
+    padding: 1px;
+    margin:  10px 40px 10px 40px;
+    width: 200px;
+}
+figure.pets:hover {
+    cursor: pointer;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.462);
+}
+figcaption {
+    padding: 0;
+    margin: 0;
+    line-height: 30%;
+    font-size: 65%;
+    text-align: center;
+}
+
+.comment-section {
+    width: 70%; height: auto;
+    margin-left: 5%;
+    caret-color: black;
+}
+.textarea {
+    width: 100%;
+    margin-top: 2px;
+}
+
+section {
+    color: rgb(0, 0, 0);
+    width: auto; height: 90vh;
+    margin: 1% 1% 1% 17%;
+}
+footer {
+    zoom: 0.7;
+    background-color: rgb(206, 209, 226);
+    border-top: 0.5px solid;
+    border-color: rgb(128, 128, 128);
+    width: 100%; height: 8%;
+    text-align: center;
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
+}
+

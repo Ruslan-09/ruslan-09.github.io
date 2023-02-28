@@ -7,8 +7,8 @@ table {
 }
 th {
     font-size: 14px;
-    background: #95bde0;
-    color: rgb(71, 69, 69);
+    background: #759ec1;
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
     border-radius: 3px;
 }
@@ -19,5 +19,5 @@ tr:nth-child(odd) {
     background: #b6d1e9;
 }
 tr:nth-child(even) {
-    background: #a0c2e1;
+    background: #8db2d4;
 }

@@ -22,7 +22,6 @@ button.table {
     color: rgb(63, 63, 81);
     margin: 0;
     box-shadow: none;
-    border: solid 1px;
 }
 button.table:active {
     transform: scale(95%);

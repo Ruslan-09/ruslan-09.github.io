@@ -1,23 +1,23 @@
 body {
-    zoom: 1.8;
-    background: linear-gradient(220deg, rgb(253, 238, 244), rgb(232, 238, 240)); 
+    zoom: 1.6;
+    background-image: url("bckgrnd.jpg");
+    background-attachment: fixed;
 }
 header {
     position: sticky;
     top: 0;
-    background: linear-gradient(220deg, rgba(253, 238, 244, 0.627), rgb(232, 238, 240)); 
 }
 h1 {
     color: rgba(21, 20, 20, 0.81);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 40px;
-    text-shadow: 1px -1px 2px rgb(28, 9, 244);
+    text-shadow: 1px -1px 2px rgba(29, 9, 244, 0.758);
     float: inline-end;
 }
 nav {
     position: sticky;
     top: 40px;
-    background: linear-gradient(220deg, rgba(253, 238, 244, 0.627), rgb(232, 238, 240)); 
+
 }
 hr {
     position: sticky;
@@ -32,9 +32,11 @@ img {
     box-shadow: 2px -2px 2px rgb(85, 100, 150);
 }
 section {
+    color: rgb(7, 29, 77);
     font-size: 80%;
     margin: 20px;
     line-height: 150%;
+    opacity: 100%;
 }
 input {
     padding: 0;
