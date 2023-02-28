@@ -69,3 +69,5 @@ function sendComment() {
     }
     
 }
+
+alert('Still under development')
