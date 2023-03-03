@@ -4,30 +4,37 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>My petshop</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 		<link rel="stylesheet" href="css/index.css">
 		<link rel="stylesheet" href="css/buttons.css">
-	</head>
+		<link type="image/png" sizes="16x16" rel="icon" href="images/icon.png">
+		<title> My petshop</title>
+</head>
 	<body>
 		<header>
-			<a href="index.html"><img class="logo" src="images/icon.png"></a> 
-			<h1><em>Online</em> <span>PetShop</span> </h1>
-			<button class="cart"><img class="cartImg" src="images/cart.png">Cart</button>
+			<div class="header-div">
+				<a href="index.html"><img class="logo" src="images/icon.png"></a> 
+				<h4 class="header"><em>Online</em> <span>PetShop</span> </h4>
+				<div class="btn-block">
+					<button class="cart"><img class="cartImg" src="images/cart.png">Cart</button>
+					<button class="logIn">Log in</button>
+				</div>
+			</div>
 		</header>
-		<hr size="0,5">
 
-		<nav>
+		<div class="nav">
 			<button id="kittensButton" class="nav" onclick="insertContent('kittens', 'kittensButton')">Kittens</button><br>
 			<button id="puppiesButton" class="nav" onclick="insertContent('puppies', 'puppiesButton')">Puppies</button><br>
 			<button id="snakesButton" class="nav" onclick="insertContent('snakes', 'snakesButton')">Snakes</button><br>
 			<button id="contact" class="nav" onclick="insertContent('contacts', 'contact')">Contacts</button><br>
-		</nav>
+		</div>
 
 		<section id="section1">
 			<div style="text-align: center;">
-				<img class="wellcome" style="width: auto; height: 175px;" src="images/wellcome1.png" alt="">
-				<h3 style="color: rgb(94, 7, 94);">Wellcome to our petshop!</h3>
-				<p><em>Here you can find your new best friend!</em></p>
+				<img class="wellcome" style="width: 35%; height: auto;" src="images/wellcome1.png" alt="">
+				<h4 style="color: rgba(111, 11, 111, 0.797);">Wellcome to our petshop!</h4>
+				<p><strong><em>Here you can find your new best friend!</em></strong></p>
 			</div>
 		</section>
 
@@ -36,7 +43,7 @@
 			<figure id="descriptionButton" class="pets" onclick="insertContent('descriptionGeneral', 'descriptionButton')">
 				<img class="pet" src="images/pets/kitten1.jpg"><br>
 				<figcaption>
-					<h3>Pushok</h3>
+					<h6>Pushok</h3>
 					<p>Age: 3 month</p>
 					<p>Color: grey</p>
 					<p><strong>Price: Priceless</strong></p>
@@ -49,7 +56,7 @@
 			<figure class="pets">
 				<img class="pet" src="images/pets/puppy.jpg"><br>
 				<figcaption>
-					<h3>Sharik</h3>
+					<h6>Sharik</h6>
 					<p>Age: 3 month</p>
 					<p>Color: grey</p>
 					<p><strong>Price: Priceless</strong></p>
@@ -65,7 +72,7 @@
 			</div>
 		</div>
 
-		<div id="descriptionGeneral"  style="display: none;">
+		<div id="descriptionGeneral"  style="display: none; align-items: center;">
 			<div class="descriptionGeneral" style="float: left;">
 				<figure class="photo">
 					<div id="imgPhotoMain" class="wrapper exmpl" onclick="zoom()"> 
@@ -104,22 +111,22 @@
 			<div class="description" style="display: inline-block;">
 				<button class="buy">Take me home</button>
 				<button class="buy">Add to cart</button>
-				<h3>Name: Pushok</h3>
+				<h5>Name: Pushok</h5>
 				<p>Age: 3 month</p>
 				<p>Color: grey</p>
 				<p><strong>Price: Priceless</strong></p>
-				<h2>Description:</h2> 
-				<p>Hello! I am a very affectionate and playful kitten. <br> And I am looking for new owners!</p>
+				<h5>Description:</h5> 
+				<p>Hello! I am a very affectionate and playful kitten. <br> And I am looking for new owners now!</p>
 			</div>	
 
 			<div id="commentSection" class="comment-section">
-				<h4>Leave your comment:</h4>
-				<div id="commentAdd" style="line-height: 5%; font-size: small;">
+				<h6>Leave your comment:</h6><br>
+				<div id="commentAdd" style="line-height: 5%; font-size: medium;">
 					<p id="dateP" style="zoom: 0.70;"></p>
 					<strong><p id="commentH4"></p></strong>
-					<p id="commentP" style="line-height: 150%"></p>
+					<p id="commentP" style="line-height: 130%;"></p>
 				</div>
-				<input type="text" name="" id="inputNane" placeholder="Your name"><br>
+				<input type="text" name="" id="inputNane" placeholder="Your name" style="zoom: 0.7; width: 60%;"><br>
 				<textarea name="" id="textarea" class="textarea" placeholder="Your comment" cols="60" rows="5"></textarea><br>
 				<button class="addToCart" style="width: 60px; zoom: 0.8;" onclick="sendComment()">Send</button>
 			</div>
@@ -135,7 +142,7 @@
 			<p><strong> Adress:</strong> 3025, Kitten street, Zoo City. <strong>Tel:</strong> 555-55-55, <strong>E-mail:</strong> pets@petshop.com</p>
 		</footer>
 
-		<script src="libs\swiper\swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
 		<script src="js/index.js"></script>
 	</body> 
 </html>

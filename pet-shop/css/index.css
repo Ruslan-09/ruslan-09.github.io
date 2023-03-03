@@ -1,36 +1,53 @@
-body {
+html, body {
+    width: 100%; 
     padding: 0;
-    margin: 0;
-    zoom: 1.6;
-    background-color: rgb(206, 209, 226);
+    margin: 2px 0 0 0;
+    zoom: 1.2;
+    background-color: rgb(228, 230, 240);
     caret-color: transparent;
     hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
 }
 header {
-    background-color: rgb(206, 209, 226);
     position: sticky;
-    top: 0;
+    top: -44px;
+    width: 100%; height: 90px;
+    margin: 0;
+    background-color: rgb(209, 212, 226);
+    border: 0.5px solid rgb(165, 168, 182);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.266);
+    
 }
-h1 {
+div.header-div {
+    position: sticky;
+    top: 3px;
+    margin: 25px 0 0 0;
+    padding: 0;
+    width: 100%; height: 40px;
+}
+
+h4.header {
+    position: absolute;
+    top: 0; left: 80px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
     color: rgb(39, 84, 38);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 40px;
-    text-shadow: 2px -2px 2px rgba(12, 2, 117, 0.489);
-    float: inline-end;
+    font-weight: bold;
+    text-shadow: 1px -1px 2px rgba(12, 2, 117, 0.489);
 }
-h1 span {
+h4 span {
     color: rgba(77, 44, 32, 0.808);;
 }
-nav {
-    border-right: solid 0.5px;
-    border-color: rgb(128, 128, 128);
-    width: 15%; height: 355px;
-    position: sticky;
-    top: 42px;
-    float: left;
+.btn-block {
+    position: absolute;
+    top: 5px; right: 2%;
+    display: inline-flex;
 }
+
 hr {
     position: sticky;
     top: 40px;
@@ -38,23 +55,40 @@ hr {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.677);
 }
 
+div.nav {
+    position: sticky;
+    top: 52px;
+    background-color: rgb(209, 212, 226);
+    width: 17%; height: 350px;
+    float: left;
+    margin: 10px 0 0 5px;
+    padding: 10px 0 0 0;
+    border-radius: 5px;
+    border: 0.5px solid rgb(165, 168, 182);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.266);
+}
+
 img.logo {
+    position: absolute;
+    top: 0;
+    display: inline-block;
     width: 50px; height: 40px;
     margin: 0 20px 0 20px;
+    padding: 1px;
     border-radius: 50%;
-    float: left;
+    border: solid rgb(95, 183, 95);
 }
 img.logo:hover {
     opacity: 80%;
 }
 img.cartImg {
-    position: inherit;
-    height: 65%; width: auto;
-    left: 11%;
+    margin-right: 10px;
+    height: 83%; width: auto;
+    padding-top: 3%;
 }
 img.pet {
-    height: 100px;
-    width: 100px;
+    height: auto;
+    width: 100%;
     border-radius: 5%;
     cursor: pointer;
 }
@@ -69,7 +103,7 @@ img.pet {
     text-align: center;
     width: auto; height: 100%;
     z-index: 9999999;
-    background-color: rgba(137, 146, 203, 0.923);
+    background-color: rgba(134, 137, 157, 0.923);
 }
 .imageZoom {
     float: left;
@@ -124,7 +158,6 @@ img.pet {
     width: 30%;
     height: 30%;
 }
-
 .close {
     position: inherit;
     top: 20px;
@@ -179,7 +212,7 @@ img.pet {
 }
 
 figure.pets {
-    border-radius: 3%;
+    border-radius: 2%;
     display: inline-block;
     padding: 1px 1px 2px 1px;
     margin:  10px 30px 10px 30px;
@@ -197,7 +230,7 @@ figure.pets:hover {
 figcaption {
     padding: 0;
     margin: 0;
-    line-height: 30%;
+    line-height: 50%;
     font-size: 65%;
     text-align: center;
 }
@@ -214,18 +247,21 @@ figcaption {
 
 section {
     color: rgb(0, 0, 0);
-    width: auto; height: 90vh;
-    margin: 1% 1% 1% 17%;
+    width: 75%; height: 90vh;
+    margin: 1% 1% 1% 20%;
 }
+
 footer {
-    zoom: 0.7;
-    background-color: rgb(206, 209, 226);
-    border-top: 0.5px solid;
-    border-color: rgb(128, 128, 128);
-    width: 100%; height: 8%;
-    text-align: center;
     position: fixed; 
     bottom: 0; 
-    left: 0;
+    zoom: 0.7;
+    background-color: rgb(209, 212, 226);
+    margin: 0;
+    padding: 0 0 10px 0;
+    border-top: 0.5px solid rgb(165, 168, 182);
+    border-color: rgb(128, 128, 128);
+    border-radius: 10px;
+    width: 100%; height: 50px;
+    text-align: center;
 }
 

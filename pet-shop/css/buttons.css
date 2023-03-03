@@ -1,6 +1,6 @@
 button {
     color: rgb(244, 232, 232);
-    width: 90%;
+    width: 90%; height: 30px;
     text-align: center;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -9,18 +9,21 @@ button {
     border-radius: 2px;
     margin: 5px;
     padding: 4px 10px 4px 10px;
-    box-shadow: 0 -2px 3px rgba(0, 0, 0, 1);
+    box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.442);
 }
 button.cart {
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    width: 10%; 
-    margin: 0;
+    width: 83px; height: 28px;
+    margin: 0 3px 0 3px;
+    text-align: right;
+}
+button.logIn {
+    width: 83px; height: 28px;
+    margin: 0 3px 0 3px;
+    text-align: center;
 }
 button.addToCart {
     width: 60%;
-    zoom: 0.5;
+    zoom: 0.7;
     background-color: rgb(140, 193, 238);
     color: rgb(2, 2, 2);
     margin: 0;
@@ -29,7 +32,7 @@ button.addToCart {
 }
 button.buy {
     zoom: 0.7;
-    width: 30%; height: 35px;
+    width: 40%; height: 35px;
     background-color: rgb(140, 193, 238);
     color: rgb(0, 0, 0);
     margin: 3px;

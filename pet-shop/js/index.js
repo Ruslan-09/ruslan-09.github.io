@@ -70,4 +70,4 @@ function sendComment() {
     
 }
 
-alert('Still under development')
+M.toast({html: 'Still under development'})
