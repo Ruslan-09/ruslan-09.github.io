@@ -9,6 +9,7 @@ html, body {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
 }
+
 header {
     position: sticky;
     top: -44px;
@@ -27,7 +28,6 @@ div.header-div {
     padding: 0;
     width: 100%; height: 40px;
 }
-
 h4.header {
     position: absolute;
     top: 0; left: 80px;
@@ -48,13 +48,6 @@ h4 span {
     display: inline-flex;
 }
 
-hr {
-    position: sticky;
-    top: 40px;
-    background: linear-gradient(220deg, rgba(253, 238, 244, 0.627), rgb(232, 238, 240)); 
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.677);
-}
-
 div.nav {
     position: sticky;
     top: 52px;
@@ -68,28 +61,64 @@ div.nav {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.266);
 }
 
-img.logo {
-    position: absolute;
-    top: 0;
+figure.pets {
+    border-radius: 2%;
     display: inline-block;
-    width: 50px; height: 40px;
-    margin: 0 20px 0 20px;
+    padding: 2px;
+    margin:  10px 30px 10px 30px;
+    width: 100px;
+}
+figure.pets:hover {
+    cursor: pointer;
+    border: solid 0.5px gray;
+}
+figcaption {
+    padding: 0;
+    margin: 0;
+    line-height: 50%;
+    font-size: 65%;
+    text-align: center;
+}
+
+figure.photo {
     padding: 1px;
-    border-radius: 50%;
-    border: solid rgb(95, 183, 95);
+    margin:  10px 40px 10px 40px;
+    width: 200px;
 }
-img.logo:hover {
-    opacity: 80%;
+.wrapper {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 5px;
 }
-img.cartImg {
-    margin-right: 10px;
-    height: 83%; width: auto;
-    padding-top: 3%;
+.exmpl {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-img.pet {
-    height: auto;
+.exmpl img {
+    border-radius: 3%;
+    object-fit: cover;
     width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.wrapper1 {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+}
+.exmpl1 {
+    overflow: hidden;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+.exmpl1 img {
     border-radius: 5%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
 }
 
@@ -141,7 +170,7 @@ img.pet {
     right: 0;
     width: 15%; height: 100%;
 }
-.Button {
+.arrow {
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -150,10 +179,10 @@ img.pet {
     opacity: 30%;
 
 }
-.Button:hover {
+.arrow:hover {
     opacity: 100%;
 }
-.Button img {
+.arrow img {
     object-fit: contain;
     width: 30%;
     height: 30%;
@@ -174,75 +203,15 @@ img.pet {
     opacity: 100%;
 }
 
-.wrapper {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 5px;
-}
-.exmpl {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.exmpl img {
-    border-radius: 3%;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-.wrapper1 {
-    margin: 5px;
-    width: 30px;
-    height: 30px;
-}
-.exmpl1 {
-    overflow: hidden;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-}
-.exmpl1 img {
-    border-radius: 5%;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-
-figure.pets {
-    border-radius: 2%;
-    display: inline-block;
-    padding: 1px 1px 2px 1px;
-    margin:  10px 30px 10px 30px;
-    width: 100px;
-}
-figure.photo {
-    padding: 1px;
-    margin:  10px 40px 10px 40px;
-    width: 200px;
-}
-figure.pets:hover {
-    cursor: pointer;
-    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.462);
-}
-figcaption {
-    padding: 0;
-    margin: 0;
-    line-height: 50%;
-    font-size: 65%;
-    text-align: center;
-}
-
 .comment-section {
     width: 70%; height: auto;
     margin-left: 5%;
     caret-color: black;
 }
-.textarea {
+.textarea.materialize-textarea {
     width: 100%;
     margin-top: 2px;
+    border: solid #9e9e9e 0.5px;
 }
 
 section {
@@ -264,4 +233,3 @@ footer {
     width: 100%; height: 50px;
     text-align: center;
 }
-

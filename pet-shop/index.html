@@ -6,7 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/images.css">
 		<link rel="stylesheet" href="css/buttons.css">
 		<link type="image/png" sizes="16x16" rel="icon" href="images/icon.png">
 		<title> My petshop</title>
@@ -95,13 +96,13 @@
 				</figure>
 			</div>
 			<div id="imageZoomDivWrapper" class="imageZoomDivWrapper" style="display: none;">
-				<div id="leftButton" class="left Button" onclick="left()">
+				<div id="leftArrow" class="left arrow" onclick="left()">
 					<img class="left-right-img" src="images/left.png" alt="">
 				</div>
 
 				<div id="imageZoomDiv" class="imageZoom Div" onclick="closeImage()"></div>
 
-				<div id="rightButton" class="right Button" onclick="right()">
+				<div id="rightArrow" class="right arrow" onclick="right()">
 					<img class="left-right-img" src="images/right.png" alt="">
 				</div>
 				<div id="closeSign" class="close Sign" onclick="closeImage()">
@@ -120,14 +121,15 @@
 			</div>	
 
 			<div id="commentSection" class="comment-section">
-				<h6>Leave your comment:</h6><br>
+				<h6>Leave your comment:</h6>
+				<hr >
 				<div id="commentAdd" style="line-height: 5%; font-size: medium;">
 					<p id="dateP" style="zoom: 0.70;"></p>
 					<strong><p id="commentH4"></p></strong>
 					<p id="commentP" style="line-height: 130%;"></p>
 				</div>
 				<input type="text" name="" id="inputNane" placeholder="Your name" style="zoom: 0.7; width: 60%;"><br>
-				<textarea name="" id="textarea" class="textarea" placeholder="Your comment" cols="60" rows="5"></textarea><br>
+				<textarea name="" id="textarea" class="materialize-textarea" placeholder="Your comment" cols="60" rows="10"></textarea><br>
 				<button class="addToCart" style="width: 60px; zoom: 0.8;" onclick="sendComment()">Send</button>
 			</div>
 		</div>
