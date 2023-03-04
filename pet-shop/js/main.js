@@ -1,5 +1,4 @@
 let pets = ['kitten1', 'kitten2', 'kitten3', 'kitten4']
-let x = 3
 
 function insertContent(contentId, buttonId) {
     for (item of ["kittensButton", "puppiesButton", "snakesButton", "contact"]) {
@@ -24,24 +23,25 @@ function closeImage() {
 }
 
 function right() {
-    console.log(document.getElementById('imageZoomDiv').innerHTML);
-    document.getElementById('imageZoomDiv').innerHTML = document.getElementById("imgPhotoButton"+x).innerHTML
-    console.log(document.getElementById('imageZoomDiv').innerHTML);
+    let array = document.getElementById("imageZoomDiv").innerHTML
+    let x = array.charAt(array.length-14)
+
     x++
     if (x > pets.length) {
         x = 1
     }
+    document.getElementById('imageZoomDiv').innerHTML = document.getElementById("imgChoose"+x).innerHTML
 }
 
 function left() {
-    console.log(document.getElementById('imageZoomDiv').innerHTML);
-    document.getElementById('imageZoomDiv').innerHTML = document.getElementById("imgPhotoButton"+x).innerHTML
-    console.log(document.getElementById('imageZoomDiv').innerHTML);
+    let array = document.getElementById("imageZoomDiv").innerHTML
+    let x = array.charAt(array.length-14)
+    
     x--
     if (x < 1) {
         x = 4
     }
-
+    document.getElementById('imageZoomDiv').innerHTML = document.getElementById("imgChoose"+x).innerHTML
 }
 
 function sendComment() {
@@ -65,7 +65,8 @@ function sendComment() {
         document.getElementById('inputNane').value = ''
         document.getElementById('textarea').value = ''
     } else {
-        alert('Input your name and your comment!')
+        //alert('Enter your name and your comment, please!')
+        M.toast({html: 'Enter your name and your comment, please!'})
     }
     
 }
