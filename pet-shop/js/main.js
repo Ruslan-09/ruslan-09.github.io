@@ -1,6 +1,6 @@
 let pets = ['kitten1', 'kitten2', 'kitten3', 'kitten4']
 
-function insertContent(contentId, buttonId) {
+function insertContent(buttonId, contentId) {
     for (item of ["kittensButton", "puppiesButton", "snakesButton", "contact"]) {
         document.getElementById(item).classList.remove('selected')
     }
@@ -45,30 +45,49 @@ function left() {
 }
 
 function sendComment() {
-
     const date = new Date()
-
     let day = date.getDate()
     let month = date.getMonth()
     let year = date.getFullYear()
 
     if (document.getElementById('inputNane').value != '' && document.getElementById('textarea').value != '') {
 
-        let h4 = document.createElement('h4').setAttribute('id', 'commentH4')
-        let Timme = document.createElement('p').setAttribute('id', 'dateP')
-        let p = document.createElement('p').setAttribute('id', 'commentP')
+        let div = document.createElement('div')  
+        let t = document.createElement('p')  
+        let name = document.createElement('h6') 
+        let comment = document.createElement('p') 
+        let hr = document.createElement('hr') 
 
-        document.getElementById('commentH4').innerHTML = document.getElementById('inputNane').value + ':'
-        document.getElementById('dateP').innerHTML = day + '.' + (+month+1) + '.' + year
-        document.getElementById('commentP').innerHTML = '« ' + document.getElementById('textarea').value + ' »'
-            
+        div.setAttribute('class', 'commemt-div')
+        t.setAttribute('id', 'dateP')  
+        name.setAttribute('id', 'commentH4') 
+        comment.setAttribute('id', 'commentP') 
+
+        document.getElementById('commentAdd').prepend(div)       
+        div.prepend(comment)       
+        div.prepend(name)
+        div.prepend(t)
+        div.append(hr)
+
+        document.getElementById('dateP').innerHTML = (day + '.' + (+month+1) + '.' + year)
+        document.getElementById('commentH4').innerHTML = '    ' + document.getElementById('inputNane').value + ':'
+        document.getElementById('commentP').innerHTML = '    « ' + document.getElementById('textarea').value + ' »'
+           
         document.getElementById('inputNane').value = ''
         document.getElementById('textarea').value = ''
+
     } else {
-        //alert('Enter your name and your comment, please!')
         M.toast({html: 'Enter your name and your comment, please!'})
     }
     
+}
+
+function addToCart(petId, cartItemId) {
+    M.toast({html: 'Added to your cart!'})
+
+    let div = document.createElement('div')
+    div.setAttribute('class', 'cart-item')
+    document.getElementById('cartWrapper').append(div) 
 }
 
 M.toast({html: 'Still under development'})

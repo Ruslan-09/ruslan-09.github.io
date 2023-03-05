@@ -11,14 +11,13 @@ img.logo {
 img.logo:hover {
     opacity: 80%;
 }
-img.cartImg {
+img.cartIcon {
     margin-right: 10px;
     height: 83%; width: auto;
     padding-top: 3%;
 }
 img.pet {
-    height: auto;
-    width: 100%;
+    width: 100px; height: auto;
     border-radius: 5%;
     cursor: pointer;
 }

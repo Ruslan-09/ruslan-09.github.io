@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/images.css">
 		<link rel="stylesheet" href="css/buttons.css">
+		<link rel="stylesheet" href="css/cart.css">
 		<link type="image/png" sizes="16x16" rel="icon" href="images/icon.png">
 		<title> My petshop</title>
 	</head>
@@ -18,16 +19,16 @@
 				<a href="index.html"><img class="logo" src="images/icon.png"></a> 
 				<h4 class="header"><em>Online</em> <span>PetShop</span> </h4>
 				<div class="btn-block">
-					<button class="cart"><img class="cartImg" src="images/cart.png">Cart</button>
-					<button class="logIn">Log in</button>
+					<button class="cart" onclick="M.toast({html: 'Still under development'})"><img class="cartIcon" src="images/cart.png">Cart</button>
+					<button class="logIn" onclick="M.toast({html: 'Still under development'})">Log in</button>
 				</div>
 			</div>
 		</header>
 		<div class="nav">
-			<button id="kittensButton" class="nav" onclick="insertContent('kittens', 'kittensButton')">Kittens</button><br>
-			<button id="puppiesButton" class="nav" onclick="insertContent('puppies', 'puppiesButton')">Puppies</button><br>
-			<button id="snakesButton" class="nav" onclick="insertContent('snakes', 'snakesButton')">Snakes</button><br>
-			<button id="contact" class="nav" onclick="insertContent('contacts', 'contact')">Contacts</button><br>
+			<button id="kittensButton" class="nav" onclick="insertContent('kittensButton', 'kittens')">Kittens</button><br>
+			<button id="puppiesButton" class="nav" onclick="insertContent('puppiesButton', 'puppies')">Puppies</button><br>
+			<button id="snakesButton" class="nav" onclick="insertContent('snakesButton', 'snakes')">Snakes</button><br>
+			<button id="contact" class="nav" onclick="insertContent('contact', 'contacts')">Contacts</button><br>
 		</div>
 
 		<section id="section1">
@@ -39,28 +40,28 @@
 		</section>
 
 		<div id="kittens" style="display: none;">
-			<figure id="descriptionButton" class="pets" onclick="insertContent('descriptionGeneral', 'descriptionButton')">
-				<img class="pet" src="images/pets/kitten1.jpg"><br>
+			<div id="kitten1" class="pets" onclick="insertContent('kitten1', 'descriptionSection')">
+				<img id="kitten1-img" class="pet" src="images/pets/kitten1.jpg"><br>
 				<figcaption>
 					<h6>Pushok</h3>
 					<p>Age: 3 month</p>
 					<p>Color: grey</p>
 					<p><strong>Price: Priceless</strong></p>
-					<button class="addToCart">Add to cart</button>
 				</figcaption>
-			</figure>
+			</div>
+			<button class="addToCart" onclick="addToCart()">Add to cart</button>
 		</div>
 		<div id="puppies" style="display: none;">
-			<figure class="pets">
+			<div id="puppy1" class="pets" onclick="insertContent()">
 				<img class="pet" src="images/pets/puppy.jpg"><br>
 				<figcaption>
-					<h6>Sharik</h6>
+					<h6>Sharik</h3>
 					<p>Age: 3 month</p>
 					<p>Color: grey</p>
 					<p><strong>Price: Priceless</strong></p>
-					<button class="addToCart">Add to cart</button>
 				</figcaption>
-			</figure>
+			</div>
+			<button class="addToCart" onclick="addToCart()">Add to cart</button>
 		</div>
 		<div id="snakes" class="snakes" style="display: none;">
 			<div style="text-align: center;">			
@@ -69,9 +70,9 @@
 			</div>
 		</div>
 
-		<div id="descriptionGeneral"  style="display: none; align-items: center;">
-			<div class="descriptionGeneral" style="float: left;">
-				<figure class="photo">
+		<div id="descriptionSection"  style="display: none;">
+			<div style="float: left;">
+				<figure class="pets-photo">
 					<div id="imgPhotoMain" class="wrapper exmpl" onclick="zoom()"> 
 						<img src="images/pets/kitten1.jpg ">
 					</div> <!-- Do not delete the space befor " -->
@@ -92,12 +93,10 @@
 				</figure>
 			</div>
 			<div id="imageZoomDivWrapper" class="imageZoomDivWrapper" style="display: none;">
+				<div id="imageZoomDiv" class="imageZoom Div" onclick="closeImage()"></div>
 				<div id="leftArrow" class="left arrow" onclick="left()">
 					<img class="left-right-img" src="images/left.png" alt="">
 				</div>
-
-				<div id="imageZoomDiv" class="imageZoom Div" onclick="closeImage()"></div>
-
 				<div id="rightArrow" class="right arrow" onclick="right()">
 					<img class="left-right-img" src="images/right.png" alt="">
 				</div>
@@ -105,9 +104,9 @@
 					<img src="images/close.png" alt="">
 				</div>
 			</div>
-			<div class="description" style="display: inline-block;">
-				<button class="buy">Take me home</button>
-				<button class="buy">Add to cart</button>
+			<div style="display: inline-block;">
+				<button class="buy" onclick="M.toast({html: 'Still under development'})">Take me home</button>
+				<button class="buy" onclick="M.toast({html: 'Still under development'})">Add to cart</button>
 				<h5>Name: Pushok</h5>
 				<p>Age: 3 month</p>
 				<p>Color: grey</p>
@@ -115,18 +114,22 @@
 				<h5>Description:</h5> 
 				<p>Hello! I am a very affectionate and playful kitten. <br> And I am looking for new owners now!</p>
 			</div>	
+			
 			<div id="commentSection" class="comment-section">
 				<h6>Leave your comment:</h6>
-				<hr >
-				<div id="commentAdd" style="line-height: 5%; font-size: medium;">
-					<p id="dateP" style="zoom: 0.70;"></p>
-					<strong><p id="commentH4"></p></strong>
-					<p id="commentP" style="line-height: 130%;"></p>
-				</div>
+				<hr>
+				<div id="commentAdd"></div><br>
 				<input type="text" name="" id="inputNane" placeholder="Your name" style="zoom: 0.7; width: 60%;"><br>
 				<textarea name="" id="textarea" class="materialize-textarea" placeholder="Your comment" cols="60" rows="10"></textarea><br>
-				<button class="addToCart" style="width: 60px; zoom: 0.8;" onclick="sendComment()">Send</button>
+				<button class="addToCart" style="width: 80px; position: relative; left: -6%;" onclick="sendComment()">Send</button>
 			</div>
+		</div>
+
+		<div id="cartWrapper" class="cart-wrapper" style="display: none;">
+			<div id="closeSignCart" class="close Sign" onclick="document.getElementById('cartWrapper').style.display='none'">
+				<img src="images/close.png" alt="">
+			</div>
+			<div id="cartItem" class="cart-item"></div>
 		</div>
 
 		<div id="contacts" style="display: none;">

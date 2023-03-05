@@ -22,11 +22,11 @@ button.logIn {
     text-align: center;
 }
 button.addToCart {
-    width: 60%;
+    width: 120px;
     zoom: 0.68;
     background-color: rgb(140, 193, 238);
     color: rgb(2, 2, 2);
-    margin: 0;
+    margin: 0 0 0 60px;
     box-shadow: none;
     border: solid 1px rgb(87, 141, 188);
 }

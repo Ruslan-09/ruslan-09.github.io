@@ -61,14 +61,13 @@ div.nav {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.266);
 }
 
-figure.pets {
+div.pets {
+    width: 106px; height: auto;
     border-radius: 2%;
-    display: inline-block;
     padding: 2px;
-    margin:  10px 30px 10px 30px;
-    width: 100px;
+    margin:  10px 30px 0 30px;
 }
-figure.pets:hover {
+div.pets:hover {
     cursor: pointer;
     border: solid 0.5px gray;
 }
@@ -80,9 +79,9 @@ figcaption {
     text-align: center;
 }
 
-figure.photo {
+figure.pets-photo {
     padding: 1px;
-    margin:  10px 40px 10px 40px;
+    margin:  10px 80px 10px 40px;
     width: 200px;
 }
 .wrapper {
@@ -188,9 +187,9 @@ figure.photo {
     height: 30%;
 }
 .close {
-    position: inherit;
-    top: 20px;
-    right: 20px;
+    position: absolute;
+    top: 13px;
+    right: 13px;
     width: auto; height: 5%;
 }
 .Sign {
@@ -208,6 +207,12 @@ figure.photo {
     margin-left: 5%;
     caret-color: black;
 }
+.commemt-div {
+    zoom: 0.7;
+    margin: 5px 0 5px 0;
+    padding: 0;
+}
+
 .textarea.materialize-textarea {
     width: 100%;
     margin-top: 2px;
@@ -221,8 +226,9 @@ figure.photo {
 
 section {
     color: rgb(0, 0, 0);
-    width: 75%; height: 90vh;
+    width: 75%; height: auto;
     margin: 1% 1% 1% 20%;
+    margin-bottom: 50px;
 }
 
 footer {
