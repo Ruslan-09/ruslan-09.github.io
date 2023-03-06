@@ -70,8 +70,8 @@ function sendComment() {
         div.append(hr)
 
         document.getElementById('dateP').innerHTML = (day + '.' + (+month+1) + '.' + year)
-        document.getElementById('commentH4').innerHTML = '    ' + document.getElementById('inputNane').value + ':'
-        document.getElementById('commentP').innerHTML = '    « ' + document.getElementById('textarea').value + ' »'
+        document.getElementById('commentH4').innerHTML = (document.getElementById('inputNane').value.charAt(0).toUpperCase() + document.getElementById('inputNane').value.slice(1)) + ' :'
+        document.getElementById('commentP').innerHTML = '« ' + document.getElementById('textarea').value + ' »'
            
         document.getElementById('inputNane').value = ''
         document.getElementById('textarea').value = ''

@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-		<link rel="stylesheet" href="css/main.css">
+		<link id="main" rel="stylesheet" href="css/main-normal.css">
 		<link rel="stylesheet" href="css/images.css">
 		<link rel="stylesheet" href="css/buttons.css">
 		<link rel="stylesheet" href="css/cart.css">
@@ -40,28 +40,32 @@
 		</section>
 
 		<div id="kittens" style="display: none;">
-			<div id="kitten1" class="pets" onclick="insertContent('kitten1', 'descriptionSection')">
-				<img id="kitten1-img" class="pet" src="images/pets/kitten1.jpg"><br>
-				<figcaption>
-					<h6>Pushok</h3>
-					<p>Age: 3 month</p>
-					<p>Color: grey</p>
-					<p><strong>Price: Priceless</strong></p>
-				</figcaption>
+			<div class="pets">
+				<div id="kitten1" onclick="insertContent('kitten1', 'descriptionSection')">
+					<img id="kitten1-img" class="pet" src="images/pets/kitten1.jpg"><br>
+					<figcaption>
+						<h6>Pushok</h3>
+						<p>Age: 3 month</p>
+						<p>Color: grey</p>
+						<p><strong>Price: Priceless</strong></p>
+					</figcaption>
+				</div>
+				<button class="addToCart" onclick="addToCart()">Add to cart</button>
 			</div>
-			<button class="addToCart" onclick="addToCart()">Add to cart</button>
 		</div>
 		<div id="puppies" style="display: none;">
-			<div id="puppy1" class="pets" onclick="insertContent()">
-				<img class="pet" src="images/pets/puppy.jpg"><br>
-				<figcaption>
-					<h6>Sharik</h3>
-					<p>Age: 3 month</p>
-					<p>Color: grey</p>
-					<p><strong>Price: Priceless</strong></p>
-				</figcaption>
+			<div class="pets">
+				<div id="puppy1" onclick="insertContent()">
+					<img id="pet" class="pet" src="images/pets/puppy.jpg"><br>
+					<figcaption>
+						<h6>Sharik</h3>
+						<p>Age: 3 month</p>
+						<p>Color: grey</p>
+						<p><strong>Price: Priceless</strong></p>
+					</figcaption>
+				</div>
+				<button class="addToCart" onclick="addToCart()">Add to cart</button>
 			</div>
-			<button class="addToCart" onclick="addToCart()">Add to cart</button>
 		</div>
 		<div id="snakes" class="snakes" style="display: none;">
 			<div style="text-align: center;">			
@@ -104,7 +108,7 @@
 					<img src="images/close.png" alt="">
 				</div>
 			</div>
-			<div style="display: inline-block;">
+			<div style="display: inline-block; margin-left: 5%;">
 				<button class="buy" onclick="M.toast({html: 'Still under development'})">Take me home</button>
 				<button class="buy" onclick="M.toast({html: 'Still under development'})">Add to cart</button>
 				<h5>Name: Pushok</h5>
@@ -121,7 +125,7 @@
 				<div id="commentAdd"></div><br>
 				<input type="text" name="" id="inputNane" placeholder="Your name" style="zoom: 0.7; width: 60%;"><br>
 				<textarea name="" id="textarea" class="materialize-textarea" placeholder="Your comment" cols="60" rows="10"></textarea><br>
-				<button class="addToCart" style="width: 80px; position: relative; left: -6%;" onclick="sendComment()">Send</button>
+				<button class="addToCart" style="width: 80px;" onclick="sendComment()">Send</button>
 			</div>
 		</div>
 
