@@ -54,7 +54,7 @@ div.nav {
     position: sticky;
     top: 52px;
     background-color: rgb(209, 212, 226);
-    min-width: 17%; height: 350px;
+    width: 17%; min-width: 17%;  height: 350px;
     float: left;
     margin: 10px 0 0 5px;
     padding: 10px 0 0 0;
@@ -90,12 +90,12 @@ figcaption {
 
 figure.pets-photo {
     padding: 1px;
-    margin:  10px 80px 10px 40px;
-    width: 200px;
+    margin:  10px 40px 10px 40px;
+    width: 230px;
 }
 .wrapper {
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
     margin-bottom: 5px;
 }
 .exmpl {
@@ -301,9 +301,8 @@ footer {
         position: sticky;
         top: 95px;
         background-color: rgb(209, 212, 226);
-        min-width: 17%; height: 350px;
-        float: left;
-        margin: 10px 0 0 5px;
+        min-width: 100%; height: auto;
+        margin: 10px 0 0 0;
         padding: 10px 0 0 0;
         border-radius: 5px;
         border: 0.5px solid rgb(165, 168, 182);
@@ -312,7 +311,7 @@ footer {
     section {
         width: auto; height: auto;
         max-width: 1000px;
-        margin: 1% 1% 15% 30%;
+        margin: 1% 1% 15% 3%;
         color: rgb(0, 0, 0);
     }
 
@@ -392,13 +391,11 @@ footer {
     .imageZoom {
         float: left;
         position: inherit;
-        top: 3%;
-        margin-left: 15%;
-        margin-right: 15%;
-        left: 0;
-        right: 0;
+        top: 50%; left: 0; right: 0;
+        transform: translate(0, -50%);
+        margin-left: 15%; margin-right: 15%;
+        width: auto; height: auto;
         text-align: center;
-        width: auto; height: 95%;
         box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.782);
         border-radius: 1%;
     }
