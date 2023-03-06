@@ -14,17 +14,17 @@
 		<title> My petshop</title>
 	</head>
 	<body>
-		<header>
+		<header id="header">
 			<div class="header-div">
 				<a href="index.html"><img class="logo" src="images/icon.png"></a> 
 				<h4 class="header"><em>Online</em> <span>PetShop</span> </h4>
-				<div class="btn-block">
+				<div id="btnBlock" class="btn-block">
 					<button class="cart" onclick="M.toast({html: 'Still under development'})"><img class="cartIcon" src="images/cart.png">Cart</button>
 					<button class="logIn" onclick="M.toast({html: 'Still under development'})">Log in</button>
 				</div>
 			</div>
 		</header>
-		<div class="nav">
+		<div id="nav" class="nav">
 			<button id="kittensButton" class="nav" onclick="insertContent('kittensButton', 'kittens')">Kittens</button>
 			<button id="puppiesButton" class="nav" onclick="insertContent('puppiesButton', 'puppies')">Puppies</button>
 			<button id="snakesButton" class="nav" onclick="insertContent('snakesButton', 'snakes')">Snakes</button>

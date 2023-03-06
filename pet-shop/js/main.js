@@ -1,5 +1,21 @@
 let pets = ['kitten1', 'kitten2', 'kitten3', 'kitten4']
 
+let width = window.innerWidth;
+
+if(width < 820) {
+
+   window.addEventListener('scroll', function() {
+
+    let header = document.getElementById('header')
+    let nav = document.getElementById('nav')
+    let btn = document.getElementById('btnBlock')
+    
+    header.setAttribute('style', 'zoom: 0.63; height: 50px; transition: 1s;')
+    nav.setAttribute('style', 'zoom: 0.8; position: sticky; top: 40px; transition: 0.3s;')
+    btn.setAttribute('style', 'position: absolute; top: 5px; right: 5%; transition: 0.3s;')
+  })
+}
+
 function insertContent(buttonId, contentId) {
     for (item of ["kittensButton", "puppiesButton", "snakesButton", "contact"]) {
         document.getElementById(item).classList.remove('selected')
