@@ -230,8 +230,10 @@ figure.pets-photo {
 
 .toast {
     position: fixed;
-    top: 10%; left: 40%;
+    top: 10%; left: 50%;
+    transform: translate(-50%, 0);
     max-width: 40%;
+    text-align: center;
 }
 
 footer {
@@ -474,8 +476,10 @@ footer {
     
     .toast {
         position: fixed;
-        top: 10%; left: 40%;
+        top: 10%; left: 50%;
+        transform: translate(-50%, 0);
         max-width: 40%;
+        text-align: center;
     }
     
     footer {
