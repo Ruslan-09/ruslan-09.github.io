@@ -11,7 +11,7 @@ if(width < 820) {
     let btn = document.getElementById('btnBlock')
     
     header.setAttribute('style', 'zoom: 0.63; height: 50px; transition: 1s;')
-    nav.setAttribute('style', 'zoom: 0.8; position: sticky; top: 40px; transition: 0.3s;')
+    nav.setAttribute('style', 'zoom: 0.85; position: sticky; top: 40px; transition: 0.3s;')
     btn.setAttribute('style', 'position: absolute; top: 5px; right: 5%; transition: 0.3s;')
   })
 }

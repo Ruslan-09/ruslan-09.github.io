@@ -296,11 +296,13 @@ footer {
         position: absolute;
         top: 50px; right: 5%;
         display: inline-flex;
+        zoom: 0.9;
     }
     
     div.nav {
         position: sticky;
         top: 95px;
+        zoom: 0.85;
         background-color: rgb(209, 212, 226);
         min-width: 100%; height: auto;
         margin: 10px 0 0 0;
