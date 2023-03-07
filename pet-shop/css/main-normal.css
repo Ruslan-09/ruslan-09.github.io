@@ -54,7 +54,7 @@ div.nav {
     position: sticky;
     top: 52px;
     background-color: rgb(209, 212, 226);
-    width: 17%; min-width: 17%;  height: 350px;
+    width: 17%; min-width: 17%;  height: 320px;
     float: left;
     margin: 10px 0 0 5px;
     padding: 10px 0 0 0;
@@ -262,9 +262,9 @@ footer {
 
     header {
         position: sticky;
-        top: 0;
+        top: 0px;
         width: 100%; height: 90px;
-        margin: 0;
+        margin: 3px 0 0 0;
         background-color: rgb(209, 212, 226);
         border: 0.5px solid rgb(165, 168, 182);
         border-radius: 10px 10px 10px 10px;
@@ -283,7 +283,7 @@ footer {
         top: 0; left: 80px;
         display: inline-block;
         margin: 0;
-        padding: 0;
+        padding: 4px 0 0 0;
         color: rgb(39, 84, 38);
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
@@ -301,7 +301,7 @@ footer {
     
     div.nav {
         position: sticky;
-        top: 95px;
+        top: 93px;
         zoom: 0.85;
         background-color: rgb(209, 212, 226);
         min-width: 100%; height: auto;

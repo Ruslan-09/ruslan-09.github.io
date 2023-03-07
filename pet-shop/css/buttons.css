@@ -79,7 +79,7 @@ button.selected {
         background-color: #493e60;
         border: 1px solid #524669;
         border-radius: 2px;
-        margin: 2px 2px 5px 2px;
+        margin: 2px 2px 10px 2px;
         padding: 4px 10px 4px 10px;
         box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.442);
     }
