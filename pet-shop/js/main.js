@@ -10,9 +10,9 @@ if(width < 820) {
     let nav = document.getElementById('nav')
     let btn = document.getElementById('btnBlock')
     
-    header.setAttribute('style', 'zoom: 0.63; height: 50px; transition: 1s;')
-    nav.setAttribute('style', 'zoom: 0.85; position: sticky; top: 40px; transition: 0.3s;')
-    btn.setAttribute('style', 'position: absolute; top: 5px; right: 5%; transition: 0.3s;')
+    header.setAttribute('style', 'zoom: 0.63; height: 50px; transition: 0.5s;')
+    nav.setAttribute('style', 'zoom: 0.85; position: sticky; top: 40px; transition: 0.5s;')
+    btn.setAttribute('style', 'position: absolute; top: 5px; right: 5%; transition: 0.5s;')
   })
 }
 
@@ -69,7 +69,7 @@ function sendComment() {
     if (document.getElementById('inputNane').value != '' && document.getElementById('textarea').value != '') {
 
         let div = document.createElement('div')  
-        let t = document.createElement('p')  
+        let t = document.createElement('t')  
         let name = document.createElement('h6') 
         let comment = document.createElement('p') 
         let hr = document.createElement('hr') 
@@ -79,11 +79,10 @@ function sendComment() {
         name.setAttribute('id', 'commentH4') 
         comment.setAttribute('id', 'commentP') 
 
-        document.getElementById('commentAdd').prepend(div)       
+        document.getElementById('commentAdd').prepend(div) 
         div.prepend(comment)       
         div.prepend(name)
         div.prepend(t)
-        div.append(hr)
 
         document.getElementById('dateP').innerHTML = (day + '.' + (+month+1) + '.' + year)
         document.getElementById('commentH4').innerHTML = (document.getElementById('inputNane').value.charAt(0).toUpperCase() + document.getElementById('inputNane').value.slice(1)) + ' :'
