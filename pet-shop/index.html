@@ -20,16 +20,13 @@
 				<a href="index.html"><img class="logo" src="images/icon.png"></a> 
 				<h4 class="header"><em>Online</em> <span>PetShop</span> </h4>
 				<div id="btnBlock" class="btn-block">
-					<button class="cart" onclick="M.toast({html: 'Still under development'})"><img class="cartIcon" src="images/cart.png">Cart</button>
+					<button class="cart" onclick="document.getElementById('cartWrapper').style.display='block'"><img class="cartIcon" src="images/cart.png">Cart</button>
 					<button class="logIn" onclick="M.toast({html: 'Still under development'})">Log in</button>
 				</div>
 			</div>
 		</header>
 		<div id="nav" class="nav">
-			<button id="kittensButton" class="nav" onclick="insertContent('kittensButton', 'kittens')">Kittens</button>
-			<button id="puppiesButton" class="nav" onclick="insertContent('puppiesButton', 'puppies')">Puppies</button>
-			<button id="snakesButton" class="nav" onclick="insertContent('snakesButton', 'snakes')">Snakes</button>
-			<button id="contact" class="nav" onclick="insertContent('contact', 'contacts')">Contacts</button>
+			<!-- <button id="contact" class="nav" onclick="insertContent('contact', 'contacts')">Contacts</button> -->
 		</div>
 
 		<section id="section1">
@@ -40,64 +37,29 @@
 			</div>
 		</section>
 
-		<div id="kittens" style="display: none;">
-			<div class="pets">
-				<div id="kitten1" onclick="insertContent('kitten1', 'descriptionSection')">
-					<img id="kitten1-img" class="pet" src="images/pets/kitten1.jpg"><br>
-					<figcaption>
-						<h6>Pushok</h3>
-						<p>Age: 3 month</p>
-						<p>Color: grey</p>
-						<p><strong>Price: Priceless</strong></p>
-					</figcaption>
-				</div>
-				<button class="addToCart" onclick="addToCart()">Add to cart</button>
-			</div>
-		</div>
-		<div id="puppies" style="display: none;">
-			<div class="pets">
-				<div id="puppy1" onclick="insertContent()">
-					<img id="pet" class="pet" src="images/pets/puppy.jpg"><br>
-					<figcaption>
-						<h6>Sharik</h3>
-						<p>Age: 3 month</p>
-						<p>Color: grey</p>
-						<p><strong>Price: Priceless</strong></p>
-					</figcaption>
-				</div>
-				<button class="addToCart" onclick="addToCart()">Add to cart</button>
-			</div>
-		</div>
-		<div id="snakes" class="snakes" style="display: none;">
-			<div style="text-align: center;">			
-				<img class="wellcome" style="width: auto; height: 100px;" src="images/snake.png" alt="">
-				<p>I am out of stock now. Sorry.</p>
-			</div>
-		</div>
-
 		<div id="descriptionSection"  style="display: none;">
 			<div style="float: left;">
 				<figure class="pets-photo">
 					<div id="imgPhotoMain" class="wrapper exmpl" onclick="zoom()"> 
-						<img src="images/pets/kitten1.jpg ">
-					</div> <!-- Do not delete the space befor " -->
+						<img src="images/pets/kittens/barsik/barsik-1.jpg">
+					</div> 
 					<figcaption id="123">
 						<div class="wrapper1 exmpl1" id="imgChoose1" onclick="insertPetsPhoto('imgChoose1', 'imgPhotoMain')">
-							<img src="images/pets/kitten1.jpg">
+							<img src="images/pets/kittens/barsik/barsik-1.jpg">
 						</div>
 						<div class="wrapper1 exmpl1" id="imgChoose2" onclick="insertPetsPhoto('imgChoose2', 'imgPhotoMain')">
-							<img src="images/pets/kitten2.jpg">
+							<img src="images/pets/kittens/barsik/barsik-2.jpg">
 						</div>
 						<div class="wrapper1 exmpl1" id="imgChoose3" onclick="insertPetsPhoto('imgChoose3', 'imgPhotoMain')">
-							<img src="images/pets/kitten3.jpg">
+							<img src="images/pets/kittens/barsik/barsik-3.jpg">
 						</div>
 						<div class="wrapper1 exmpl1" id="imgChoose4" onclick="insertPetsPhoto('imgChoose4', 'imgPhotoMain')">
-							<img src="images/pets/kitten4.jpg">
+							<img src="images/pets/kittens/barsik/barsik-4.jpg">
 						</div>
 					</figcaption>
 				</figure>
 			</div>
-			<div id="imageZoomDivWrapper" class="imageZoomDivWrapper" style="display: none;">
+			<div id="imageZoomDivWrapper" class="image-Zoom-Div-Wrapper" style="display: none;">
 				<div id="imageZoomDiv" class="imageZoom Div" onclick="closeImage()"></div>
 				<div id="leftArrow" class="left arrow" onclick="left()">
 					<img class="left-right-img" src="images/left.png" alt="">
@@ -147,6 +109,8 @@
 		</footer>
 
 		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script src="js/const.js"></script>
+		<script src="js/pets.js"></script>
 		<script src="js/main.js"></script>
 	</body> 
 </html>

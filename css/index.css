@@ -1,7 +1,7 @@
 body {
     zoom: 1.6;
     background: url("bckgrnd.jpg") no-repeat ;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     background-attachment: fixed;
 }

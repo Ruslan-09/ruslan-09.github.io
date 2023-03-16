@@ -69,16 +69,18 @@ section {
     color: rgb(0, 0, 0);
 }
 
-div.pets {
+div.pet {
+    display: inline-block;
     width: 106px; height: auto;
-    border-radius: 2%;
-    padding: 2px;
-    margin:  0;
+    border-radius: 4px;
+    padding: 3px 2px;
+    margin:  10px 20px 20px 25px;
     text-align: center;
 }
-div.pets:hover {
+div.pet:hover {
     cursor: pointer;
-    border: solid 0.5px gray;
+    background-color: #71658c95;
+    transition: 0.5s;
 }
 figcaption {
     padding: 0;
@@ -130,7 +132,7 @@ figure.pets-photo {
     cursor: pointer;
 }
 
-.imageZoomDivWrapper {
+.image-Zoom-Div-Wrapper {
     position: fixed;
     top: 0;
     margin-left: 0;
