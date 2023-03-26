@@ -198,9 +198,9 @@ figure.pets-photo {
     height: 30%;
 }
 .close {
-    position: absolute;
-    top: 13px;
-    right: 13px;
+    position: fixed;
+    top: 12%;
+    right: 12%;
     width: auto; height: 5%;
 }
 .Sign {

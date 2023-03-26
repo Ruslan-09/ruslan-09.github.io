@@ -10,7 +10,6 @@ createButtons()
 
 function getKindSet() {
     let set = new Set()
-
     for (pet of pets) {
         set.add(pet.kind)
     }
@@ -30,51 +29,42 @@ function createButtons() {
 }
 
 function getCounters() {
-
     let counters = {}
-
     kindSet.forEach(kind => {
-
         let petsCount = 0
-        
         pets.forEach(pet => {
             if (kind === pet.kind || kind === ALL_BUTTON_ID) {
                 petsCount++
             }
         })        
         counters[kind] = petsCount
-        
     }) 
     return counters
 }
 
 function fillContent(contentId) {
-
     let petsList = ''
-
     for (pet of pets) {
         if (contentId === pet.kind || contentId === ALL_BUTTON_ID) {
             petsList += `<div class="pet">
-                <div id="${pet.id}" onclick="insertDescription('${pet.id}', 'descriptionSection')">
-                    ${pet.photo}<br>
-                    <figcaption>
-                        <h6>${pet.name}</h3>
-                        <p>Age: ${pet.age}</p>
-                        <p>Color: ${pet.color}</p>
-                        <p><strong>${pet.price}: Priceless</strong></p>
-                    </figcaption>
-                </div>
-                <button class="addToCart" onclick="addToCart(${pet.id})">Add to cart</button>
-            </div>`
+                            <div id="${pet.id}" onclick="insertDescription('${pet.id}', 'descriptionSection')">
+                                ${pet.photo}<br>
+                                <figcaption>
+                                    <h6>${pet.name}</h3>
+                                    <p>Age: ${pet.age}</p>
+                                    <p>Color: ${pet.color}</p>
+                                    <p><strong>${pet.price}: Priceless</strong></p>
+                                </figcaption>
+                            </div>
+                            <button class="addToCart" onclick="addToCart('${pet.id}')">Add to cart</button>
+                        </div>`
         }
     }
     document.getElementById(contentId).innerHTML = petsList
 }
 
 function insertContent(buttonId, contentId) {
-
     fillContent(contentId)
-
     for (kind of kindSet) {
         document.getElementById(`${kind}Button`).classList.remove('selected')
     }
@@ -160,12 +150,48 @@ function sendComment() {
 
 }
 
-function addToCart(petId, cartItemId) {
-    M.toast({ html: 'Added to your cart!' })
+function addToCart(petId) {
+    M.toast({ html: 'Added to your cart.' })
 
-    let div = document.createElement('div')
-    div.setAttribute('class', 'cart-item')
-    document.getElementById('cartWrapper').append(div)
+    if (cart[petId] === undefined) {
+        cart[petId] = 1
+    } else {
+        cart[petId]++
+    }
+}
+
+function showCart() {
+    document.getElementById('cartWrapper').style.display='block'
+    document.getElementById('cartWrapper').innerHTML = `
+        <div id="closeSignCart" class="close Sign" onclick="document.getElementById('cartWrapper').style.display='none'">
+            <img src="images/close.png" alt="">
+        </div>`
+
+    Object.keys(cart).forEach(id => {
+        document.getElementById('cartWrapper').innerHTML += `
+            <div class="cart-item">
+                ${getPetById(id).photo}
+                <div>
+                    <strong>${getPetById(id).name}</strong> <br>
+                    Age: ${getPetById(id).age} <br>
+                    Color: ${getPetById(id).color} <br>
+                    Price: ${getPetById(id).price}
+                </div>
+                <img class="deleteIcon" onclick="this.parentElement.remove()" src="images/delete.png"> <br>
+                <btn>
+                    <button class="cart" onclick="M.toast({html: 'Still under development'})">Buy</button>
+                </btn>     
+            </div>`
+
+    })    
+}
+
+function getPetById(petId) {
+    let pet = pets.find(pet => {
+        return pet.id === petId
+    })
+    return pet
+    
 }
 
 if (width < 820) {

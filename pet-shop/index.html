@@ -20,14 +20,12 @@
 				<a href="index.html"><img class="logo" src="images/icon.png"></a> 
 				<h4 class="header"><em>Online</em> <span>PetShop</span> </h4>
 				<div id="btnBlock" class="btn-block">
-					<button class="cart" onclick="document.getElementById('cartWrapper').style.display='block'"><img class="cartIcon" src="images/cart.png">Cart</button>
+					<button class="cart" onclick="showCart()"><img class="cartIcon" src="images/cart.png">Cart</button>
 					<button class="logIn" onclick="M.toast({html: 'Still under development'})">Log in</button>
 				</div>
 			</div>
 		</header>
-		<div id="nav" class="nav">
-			<!-- <button id="contact" class="nav" onclick="insertContent('contact', 'contacts')">Contacts</button> -->
-		</div>
+		<div id="nav" class="nav"></div>
 
 		<section id="section1">
 			<div style="text-align: center;">
@@ -92,18 +90,14 @@
 			</div>
 		</div>
 
-		<div id="cartWrapper" class="cart-wrapper" style="display: none;">
-			<div id="closeSignCart" class="close Sign" onclick="document.getElementById('cartWrapper').style.display='none'">
-				<img src="images/close.png" alt="">
-			</div>
-			<div id="cartItem" class="cart-item"></div>
-		</div>
+		<div id="cartWrapper" class="cart-wrapper" style="display: none;"></div>
 
 		<div id="contacts" style="display: none;">
 			<p><strong> Adress:</strong> 3025, Kitten street, Zoo City.</p> 
 			<p><strong>Tel:</strong> 555-55-55,</strong></p>
 		 	<p><strong>E-mail:</strong> pets@petshop.com</p></p>	
 		</div>
+
 		<footer id="footer">
 			<p><strong> Adress:</strong> 3025, Kitten street, Zoo City. <strong>Tel:</strong> 555-55-55, <strong>E-mail:</strong> pets@petshop.com</p>
 		</footer>

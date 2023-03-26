@@ -3,9 +3,11 @@ let descriptions = {
     "puppies": "Hello! I am a very affectionate and playful puppy. And I am looking for new owners!"
 }
 
+let cart = {}
+
 let pets = [
     {
-        "id": "kitten-1",
+        "id": "kitten1",
         "kind": "kittens",
         "name": "Barsik",
         "age": "3 month",
@@ -15,7 +17,7 @@ let pets = [
         "description": descriptions.kittens
     },
     {
-        "id": "kitten-2",
+        "id": "kitten2",
         "kind": "kittens",
         "name": "Murzik",
         "age": "3 month",
@@ -25,7 +27,7 @@ let pets = [
         "description": descriptions.kittens
     },
     {
-        "id": "kitten-3",
+        "id": "kitten3",
         "kind": "kittens",
         "name": "Pushok",
         "age": "3 month",
@@ -35,7 +37,7 @@ let pets = [
         "description": descriptions.kittens
     },
     {
-        "id": "kitten-4",
+        "id": "kitten4",
         "kind": "kittens",
         "name": "Snezhok",
         "age": "3 month",
@@ -47,7 +49,7 @@ let pets = [
     
     
     {
-        "id": "puppy-2",
+        "id": "puppy1",
         "kind": "puppies",
         "name": "Sharik",
         "age": "3 month",
@@ -57,7 +59,7 @@ let pets = [
         "description": descriptions.puppies
     },
     {
-        "id": "puppy-3",
+        "id": "puppy2",
         "kind": "puppies",
         "name": "Tuzik",
         "age": "3 month",
@@ -67,7 +69,7 @@ let pets = [
         "description": descriptions.puppies
     },
     {
-        "id": "puppy-4",
+        "id": "puppy3",
         "kind": "puppies",
         "name": "Bobik",
         "age": "3 month",
@@ -77,7 +79,7 @@ let pets = [
         "description": descriptions.puppies
     },
     {
-        "id": "puppy-5",
+        "id": "puppy4",
         "kind": "puppies",
         "name": "Sharik",
         "age": "3 month",
@@ -87,7 +89,7 @@ let pets = [
         "description": descriptions.puppies
     },
     {
-        "id": "puppy-6",
+        "id": "puppy5",
         "kind": "puppies",
         "name": "Tuzik",
         "age": "3 month",
@@ -97,7 +99,7 @@ let pets = [
         "description": descriptions.puppies
     },
     {
-        "id": "puppy-7",
+        "id": "puppy6",
         "kind": "puppies",
         "name": "Bobik",
         "age": "3 month",
@@ -108,7 +110,7 @@ let pets = [
     },
 
     {
-        "id": "snake-8",
+        "id": "snake1",
         "kind": "snakes",
         "name": "Venom",
         "age": "3 month",
@@ -119,7 +121,7 @@ let pets = [
     },
 
     {
-        "id": "spider-9",
+        "id": "spider1",
         "kind": "spiders",
         "name": "SpiderMan",
         "age": "3 month",

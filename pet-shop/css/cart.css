@@ -4,21 +4,49 @@
     left: 10%; right: 10%;
     margin-left: 0;
     margin-right: 0;
-    text-align: center;
     width: auto; height: auto;
     background-color: rgba(229, 230, 238, 0.923);    
     border: solid 0.5px;
+    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: auto;
+    border: 0.5px solid rgb(165, 168, 182);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.266);
 }
 .cart-item {
     position: relative;
     top: 10%; bottom: 10%;
     margin: 0 5% 8px 5%;
-    text-align: center;
-    width: auto; height: 80px;
-    background-color: rgba(229, 230, 238, 0.923);    
-    border: solid 0.5px;
+    width: auto; height: 106px;
+    background-color: rgb(229, 230, 238);    
+    border: 0.5px solid rgb(165, 168, 182);
+    border-radius: 4px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.266);
 }
 
-.cart-item-pet {
-    border: solid 0.5px;
+.cart-item img {
+    position: relative;
+    float: left;
+    margin: 2px 20px 2px 2px;
+}
+.cart-item div {
+    position: relative;
+    float: left;
+    margin: 10px 150px 10px 5px;
+}
+.cart-item btn button {
+    position: absolute;
+    bottom: 15%; right: 1%;
+    text-align: center;
+}
+img.deleteIcon {
+    position: absolute;
+    top: 10%; right: 0.5%;
+    height: 20%; width: auto;
+}
+img.deleteIcon:hover {
+    cursor: pointer;
+    padding: 2px;
+    background-color: #71658c95;
+    border-radius: 50%;
 }
