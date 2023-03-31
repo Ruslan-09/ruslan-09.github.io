@@ -49,7 +49,7 @@
     div.nav {
         position: sticky;
         top: 93px;
-        zoom: 0.85;
+        zoom: 0.70;
         background-color: rgb(209, 212, 226);
         min-width: 100%; height: auto;
         margin: 10px 0 0 0;
@@ -57,7 +57,9 @@
         border-radius: 5px;
         border: 0.5px solid rgb(165, 168, 182);
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.266);
+        font-size: 80%;
     }
+
     section {
         width: auto; height: auto;
         max-width: 1000px;
@@ -65,16 +67,18 @@
         color: rgb(0, 0, 0);
     }
 
-    div.pets {
+    div.pet {
+        display: inline-block;
         width: 106px; height: auto;
-        border-radius: 2%;
-        padding: 2px;
-        margin:  0;
+        border-radius: 4px;
+        padding: 3px 2px;
+        margin:  10px 20px 20px 25px;
         text-align: center;
     }
-    div.pets:hover {
+    div.pet:hover {
         cursor: pointer;
-        border: solid 0.5px gray;
+        background-color: #71658c95;
+        transition: 0.5s;
     }
     figcaption {
         padding: 0;

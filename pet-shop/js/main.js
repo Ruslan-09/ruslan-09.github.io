@@ -163,9 +163,13 @@ function addToCart(petId) {
 function showCart() {
     document.getElementById('cartWrapper').style.display='block'
     document.getElementById('cartWrapper').innerHTML = `
-        <div id="closeSignCart" class="close Sign" onclick="document.getElementById('cartWrapper').style.display='none'">
+        <div id="closeSignCart" class="close-cart" onclick="document.getElementById('cartWrapper').style.display='none'">
             <img src="images/close.png" alt="">
-        </div>`
+     
+        </div>
+        <btn>
+            <button class="cart" onclick="M.toast({html: 'Still under development'})">Buy</button>
+        </btn>`
 
     Object.keys(cart).forEach(id => {
         document.getElementById('cartWrapper').innerHTML += `
@@ -178,11 +182,7 @@ function showCart() {
                     Price: ${getPetById(id).price}
                 </div>
                 <img class="deleteIcon" onclick="this.parentElement.remove()" src="images/delete.png"> <br>
-                <btn>
-                    <button class="cart" onclick="M.toast({html: 'Still under development'})">Buy</button>
-                </btn>     
             </div>`
-
     })    
 }
 
@@ -191,7 +191,6 @@ function getPetById(petId) {
         return pet.id === petId
     })
     return pet
-    
 }
 
 if (width < 820) {
