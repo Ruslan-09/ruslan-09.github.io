@@ -169,13 +169,13 @@
         position: inherit;
         left: 0;
         bottom: 10%;
-        width: 40%; height: 15%;
+        width: 45%; height: 15%;
     }
     .right {
         position: inherit;
         right: 0;
         bottom: 10%;
-        width: 40%; height: 15%;
+        width: 45%; height: 15%;
     }
     .arrow {
         overflow: hidden;
@@ -194,19 +194,17 @@
         width: 30%;
         height: 30%;
     }
-    .close {
+    .closeSign {
         position: absolute;
         top: 13px;
         right: 13px;
         width: auto; height: 5%;
-    }
-    .Sign {
         overflow: hidden;
         display: flex;
         cursor: pointer;
         opacity: 40%;
     }
-    .Sign:hover {
+    .closeSign:hover {
         opacity: 100%;
     }
     

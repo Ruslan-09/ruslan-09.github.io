@@ -56,7 +56,7 @@ img.deleteIcon:hover {
     border-radius: 50%;
 }
 
-.close-cart {
+.closeCart {
     position: fixed;
     top: 5%;
     right: 12%;
@@ -66,7 +66,7 @@ img.deleteIcon:hover {
     cursor: pointer;
     opacity: 40%;
 }
-.close-cart:hover {
+.closeCart:hover {
     opacity: 100%;
 }
 }

@@ -163,7 +163,7 @@ function addToCart(petId) {
 function showCart() {
     document.getElementById('cartWrapper').style.display='block'
     document.getElementById('cartWrapper').innerHTML = `
-        <div id="closeSignCart" class="close-cart" onclick="document.getElementById('cartWrapper').style.display='none'">
+        <div id="closeSignCart" class="closeCart" onclick="document.getElementById('cartWrapper').style.display='none'">
             <img src="images/close.png" alt="">
      
         </div>

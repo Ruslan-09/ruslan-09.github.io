@@ -132,7 +132,7 @@ figure.pets-photo {
     cursor: pointer;
 }
 
-.image-Zoom-Div-Wrapper {
+.imageZoomDivWrapper {
     position: fixed;
     top: 0;
     margin-left: 0;
@@ -197,18 +197,16 @@ figure.pets-photo {
     width: 30%;
     height: 30%;
 }
-.close {
+.closeSign {
     position: absolute;
     top: 2%; right: 2%;
     width: auto; height: 5%;
-}
-.Sign {
     overflow: hidden;
     display: flex;
     cursor: pointer;
     opacity: 40%;
 }
-.Sign:hover {
+.closeSign:hover {
     opacity: 100%;
 }
 
