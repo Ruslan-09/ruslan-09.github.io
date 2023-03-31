@@ -202,7 +202,7 @@ if (width < 820) {
         let btn = document.getElementById('btnBlock')
 
         header.setAttribute('style', 'zoom: 0.63; height: 50px; transition: 0.5s;')
-        nav.setAttribute('style', 'zoom: 0.85; position: sticky; top: 40px; transition: 0.5s;')
+        nav.setAttribute('style', 'zoom: 0.7; position: sticky; top: 40px; transition: 0.5s;')
         btn.setAttribute('style', 'position: absolute; top: 5px; right: 5%; transition: 0.5s;')
     })
 }
