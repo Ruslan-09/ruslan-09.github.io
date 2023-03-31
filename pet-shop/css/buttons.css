@@ -13,6 +13,28 @@ button {
     padding: 4px 10px 4px 10px;
     box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.442);
 }
+
+button.nav {
+    position: relative;
+    text-align: left;
+}
+button.nav p {
+    margin: 0 0 0 10%;
+    padding: 0;
+}
+button.nav p::after {
+    content: attr(data-count);
+    position: absolute;
+    top: 50%; right: 5%;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    padding: 3%;
+    font-size: 60%;
+    margin-left: 20%;
+    color: black;
+    background-color: rgb(226, 213, 213);
+}
+
 button.cart {
     width: 83px; height: 28px;
     margin: 0 3px 0 3px;
@@ -101,6 +123,29 @@ button.selected {
         box-shadow: none;
         border: solid 1px rgb(87, 141, 188);
     }
+
+    button.nav {
+        position: relative;
+        text-align: left;
+    }
+    button.nav p {
+        margin: 0 0 0 10%;
+        padding: 0;
+    }
+    button.nav p::after {
+        content: attr(data-count);
+        position: absolute;
+        top: 50%; right: 5%;
+        transform: translate(0, -50%);
+        border-radius: 50%;
+        padding: 3%;
+        font-size: 60%;
+        margin-left: 20%;
+        color: black;
+        background-color: rgb(226, 213, 213);
+    }
+
+
 }
 
 

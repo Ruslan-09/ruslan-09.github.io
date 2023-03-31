@@ -24,7 +24,7 @@ function createButtons() {
         div.setAttribute('style', 'display: none')
         document.body.append(div)
 
-        document.getElementById('nav').innerHTML += `<button id='${kind}Button' class='nav' onclick="insertContent('${kind}Button', '${kind}')">${camelize(kind)} - ${counters[kind]}</button>`
+        document.getElementById('nav').innerHTML += `<button id='${kind}Button' class='nav' onclick="insertContent('${kind}Button', '${kind}')"><p data-count="${counters[kind]}">${camelize(kind)}</p></button>`
     }
 }
 
