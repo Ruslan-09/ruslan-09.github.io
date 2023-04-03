@@ -27,7 +27,7 @@ button.nav p::after {
     position: absolute;
     top: 50%; right: 5%;
     transform: translate(0, -50%);
-    border-radius: 50%;
+    border-radius: 30%;
     padding: 3%;
     font-size: 60%;
     margin-left: 20%;
