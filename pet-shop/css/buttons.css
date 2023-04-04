@@ -14,37 +14,37 @@ button {
     box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.442);
 }
 
+button.cart {
+    position: relative;
+    width: 100px; height: 28px;
+    margin: 0 3px 0 3px;
+    text-align: center;
+}
+button.logIn {
+    position: relative;
+    width: 83px; height: 28px;
+    margin: 0 3px 0 3px;
+    text-align: center;
+}
+
 button.nav {
     position: relative;
     text-align: left;
 }
-button.nav p {
-    margin: 0 0 0 10%;
-    padding: 0;
-}
-button.nav p::after {
+
+button.cart::after, button.nav::after {
     content: attr(data-count);
     position: absolute;
     top: 50%; right: 5%;
     transform: translate(0, -50%);
-    border-radius: 30%;
+    border-radius: 40%;
     padding: 3%;
-    font-size: 60%;
+    font-size: 50%;
     margin-left: 20%;
     color: black;
     background-color: rgb(226, 213, 213);
 }
 
-button.cart {
-    width: 83px; height: 28px;
-    margin: 0 3px 0 3px;
-    text-align: right;
-}
-button.logIn {
-    width: 83px; height: 28px;
-    margin: 0 3px 0 3px;
-    text-align: center;
-}
 button.addToCart {
     width: 120px;
     zoom: 0.68;
@@ -53,6 +53,11 @@ button.addToCart {
     margin: 0;
     box-shadow: none;
     border: solid 1px rgb(87, 141, 188);
+}
+button.addToCart:active {
+    box-shadow: 0 -5px 7px rgba(0, 0, 0, 1);
+    transform: translate(0, 1px);
+    transition-duration: .2s;
 }
 button.buy {
     zoom: 0.7;
@@ -63,6 +68,12 @@ button.buy {
     box-shadow: none;
     border: solid 1px rgb(87, 141, 188);
 }
+button.buy:active {
+    box-shadow: 0 -5px 7px rgba(0, 0, 0, 1);
+    transform: translate(0, 1px);
+    transition-duration: .2s;
+}
+
 button:hover {
     box-shadow: 0 -3px 5px rgba(0, 0, 0, 1);
     cursor: pointer;
@@ -70,16 +81,6 @@ button:hover {
 button:active {
     box-shadow: 0 -5px 7px rgba(0, 0, 0, 1);
     transform: translate(0, 2px);
-    transition-duration: .2s;
-}
-button.addToCart:active {
-    box-shadow: 0 -5px 7px rgba(0, 0, 0, 1);
-    transform: translate(0, 1px);
-    transition-duration: .2s;
-}
-button.buy:active {
-    box-shadow: 0 -5px 7px rgba(0, 0, 0, 1);
-    transform: translate(0, 1px);
     transition-duration: .2s;
 }
 button.selected {
@@ -94,7 +95,7 @@ button.selected {
 
     button {
         color: rgb(244, 232, 232);
-        width: 95px; height: 30px;
+        width: 97px; height: 30px;
         text-align: center;
         font-weight: bold;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -104,6 +105,18 @@ button.selected {
         margin: 2px 2px 10px 2px;
         padding: 4px 10px 4px 10px;
         box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.442);
+    }
+    button.logIn {
+        position: relative;
+        width: 83px; height: 28px;
+        margin: 0 3px 0 3px;
+        text-align: center;
+    }
+    button.cart {
+        position: relative;
+        width: 100px; height: 28px;
+        margin: 0 3px 0 3px;
+        text-align: center;
     }
     button.addToCart {
         width: 120px;
@@ -123,16 +136,11 @@ button.selected {
         box-shadow: none;
         border: solid 1px rgb(87, 141, 188);
     }
-
     button.nav {
         position: relative;
         text-align: left;
     }
-    button.nav p {
-        margin: 0 0 0 10%;
-        padding: 0;
-    }
-    button.nav p::after {
+    button.cart::after, button.nav::after {
         content: attr(data-count);
         position: absolute;
         top: 50%; right: 5%;

@@ -4,6 +4,8 @@ let width = window.innerWidth;
 
 let kindSet = getKindSet()
 
+let cartCounter = 0
+
 let counters = getCounters()
 
 createButtons()
@@ -18,13 +20,17 @@ function getKindSet() {
 }
 
 function createButtons() {
+    document.getElementById('btnBlock').innerHTML += `
+        <button id="cartButton" class="cart" data-count="${cartCounter}" onclick="showCart()"><img class="cartIcon" src="images/cart.png">Cart</button>
+        <button class="logIn" onclick="M.toast({html: 'Still under development'})">Log in</button>`
+
     for (kind of kindSet) {
         let div = document.createElement('div')
         div.setAttribute('id', kind)
         div.setAttribute('style', 'display: none')
         document.body.append(div)
 
-        document.getElementById('nav').innerHTML += `<button id='${kind}Button' class='nav' onclick="insertContent('${kind}Button', '${kind}')"><p data-count="${counters[kind]}">${camelize(kind)}</p></button>`
+        document.getElementById('nav').innerHTML += `<button id='${kind}Button' class='nav' data-count="${counters[kind]}" onclick="insertContent('${kind}Button', '${kind}')">${camelize(kind)}</button>`
     }
 }
 
@@ -151,13 +157,16 @@ function sendComment() {
 }
 
 function addToCart(petId) {
-    M.toast({ html: 'Added to your cart.' })
-
     if (cart[petId] === undefined) {
         cart[petId] = 1
+        M.toast({ html: 'Added to your cart.' })
+        cartCounter++
     } else {
         cart[petId]++
+        M.toast({ html: 'Already added to your cart.' })
     }
+
+    document.getElementById('cartButton').setAttribute('data-count', cartCounter)
 }
 
 function showCart() {
@@ -165,10 +174,9 @@ function showCart() {
     document.getElementById('cartWrapper').innerHTML = `
         <div id="closeSignCart" class="closeCart" onclick="document.getElementById('cartWrapper').style.display='none'">
             <img src="images/close.png" alt="">
-     
         </div>
         <btn>
-            <button class="cart" onclick="M.toast({html: 'Still under development'})">Buy</button>
+            <button class="logIn" onclick="M.toast({ html: 'Still under development' })">Buy</button>
         </btn>`
 
     Object.keys(cart).forEach(id => {
@@ -181,9 +189,15 @@ function showCart() {
                     Color: ${getPetById(id).color} <br>
                     Price: ${getPetById(id).price}
                 </div>
-                <img class="deleteIcon" onclick="this.parentElement.remove()" src="images/delete.png"> <br>
+                <img class="deleteIcon" onclick="this.parentElement.remove(), removeItemFromCart('${id}')" src="images/delete.png"> <br>
             </div>`
-    })    
+    }) 
+}
+
+function removeItemFromCart(id) {
+    delete cart[id]
+    cartCounter--
+    document.getElementById('cartButton').setAttribute('data-count', cartCounter)
 }
 
 function getPetById(petId) {

@@ -11,9 +11,10 @@ img.logo:hover {
     opacity: 80%;
 }
 img.cartIcon {
-    margin-right: 10px;
-    height: 83%; width: auto;
-    padding-top: 3%;
+    position: absolute;
+    top: 50%; left: 10%;
+    transform: translate(0, -50%);
+    height: 55%; width: auto;
 }
 img.pet {
     width: 100px; height: 100px;
