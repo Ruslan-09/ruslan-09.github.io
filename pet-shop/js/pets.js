@@ -1,6 +1,8 @@
 let descriptions = {
-    "kittens": "Hello! I am a very affectionate and playful kitten1. And I am looking for new owners!",
-    "puppies": "Hello! I am a very affectionate and playful puppy. And I am looking for new owners!"
+    "kittens": "Hello! I am a very affectionate and playful kitten.<br> And I am looking for new owners!",
+    "puppies": "Hello! I am a very affectionate and playful puppy.<br> And I am looking for new owners!",
+    "snakes": "Hello! I am a very affectionate and playful snake.<br> And I am looking for new owners!",
+    "spiders": "Hello! I am a very affectionate and playful spider.<br> And I am looking for new owners!"
 }
 
 let cart = {}
@@ -13,7 +15,10 @@ let pets = [
         "age": "3 month",
         "color": "grey",
         "price": "Priceless",
-        "photo": "<img id='kitten1-img' class='pet' src='images/pets/kittens/barsik/barsik-1.jpg'>",
+        "photo1": "images/pets/kittens/barsik/barsik-1.jpg",
+        "photo2": "images/pets/kittens/barsik/barsik-2.jpg",
+        "photo3": "images/pets/kittens/barsik/barsik-3.jpg",
+        "photo4": "images/pets/kittens/barsik/barsik-4.jpg",
         "description": descriptions.kittens
     },
     {
@@ -23,7 +28,10 @@ let pets = [
         "age": "3 month",
         "color": "grey",
         "price": "Priceless",
-        "photo": "<img id='kitten2-img' class='pet' src='images/pets/kittens/murzik/murzik-1.jpg'>",
+        "photo1": "images/pets/kittens/murzik/murzik-1.jpg",
+        "photo2": "images/pets/kittens/murzik/murzik-2.jpg",
+        "photo3": "images/pets/kittens/murzik/murzik-3.jpg",
+        "photo4": "images/pets/kittens/murzik/murzik-4.jpg",
         "description": descriptions.kittens
     },
     {
@@ -33,7 +41,10 @@ let pets = [
         "age": "3 month",
         "color": "grey",
         "price": "Priceless",
-        "photo": "<img id='kitten3-img' class='pet' src='images/pets/kittens/pushok/pushok-1.jpg'>",
+        "photo1": "images/pets/kittens/pushok/pushok-1.jpg",
+        "photo2": "images/pets/kittens/pushok/pushok-2.jpg",
+        "photo3": "images/pets/kittens/pushok/pushok-3.jpg",
+        "photo4": "images/pets/kittens/pushok/pushok-4.jpg",
         "description": descriptions.kittens
     },
     {
@@ -43,7 +54,10 @@ let pets = [
         "age": "3 month",
         "color": "grey",
         "price": "Priceless",
-        "photo": "<img id='kitten4-img' class='pet' src='images/pets/kittens/snezhok/snezhok-1.jpg'>",
+        "photo1": "images/pets/kittens/snezhok/snezhok-1.jpg",
+        "photo2": "images/pets/kittens/snezhok/snezhok-2.jpg",
+        "photo3": "images/pets/kittens/snezhok/snezhok-3.jpg",
+        "photo4": "images/pets/kittens/snezhok/snezhok-4.jpg",
         "description": descriptions.kittens
     },
     
@@ -51,31 +65,27 @@ let pets = [
     {
         "id": "puppy1",
         "kind": "puppies",
-        "name": "Sharik",
+        "name": "Bobik",
         "age": "3 month",
         "color": "grey",
         "price": "Priceless",
-        "photo": "<img id='puppy1-img' class='pet' src='images/pets/puppy1.jpg'>",
-        "description": descriptions.puppies
-    },
-    {
-        "id": "puppy2",
-        "kind": "puppies",
-        "name": "Tuzik",
-        "age": "3 month",
-        "color": "grey",
-        "price": "Priceless",
-        "photo": "<img id='puppy2-img' class='pet' src='images/pets/puppy2.jpg'>",
+        "photo1": "images/pets/puppies/bobik/bobik-1.jpg",
+        "photo2": "images/pets/puppies/bobik/bobik-2.jpg",
+        "photo3": "images/pets/puppies/bobik/bobik-3.jpg",
+        "photo4": "images/pets/puppies/bobik/bobik-4.jpg",
         "description": descriptions.puppies
     },
     {
         "id": "puppy3",
         "kind": "puppies",
-        "name": "Bobik",
+        "name": "Palkan",
         "age": "3 month",
         "color": "grey",
         "price": "Priceless",
-        "photo": "<img id='puppy3-img' class='pet' src='images/pets/puppy3.jpg'>",
+        "photo1": "images/pets/puppies/palkan/palkan-1.jpg",
+        "photo2": "images/pets/puppies/palkan/palkan-2.jpg",
+        "photo3": "images/pets/puppies/palkan/palkan-3.jpg",
+        "photo4": "images/pets/puppies/palkan/palkan-4.jpg",
         "description": descriptions.puppies
     },
     {
@@ -85,30 +95,26 @@ let pets = [
         "age": "3 month",
         "color": "grey",
         "price": "Priceless",
-        "photo": "<img id='puppy1-img' class='pet' src='images/pets/puppy1.jpg'>",
+        "photo1": "images/pets/puppies/sharik/sharik-1.jpg",
+        "photo2": "images/pets/puppies/sharik/sharik-2.jpg",
+        "photo3": "images/pets/puppies/sharik/sharik-3.jpg",
+        "photo4": "images/pets/puppies/sharik/sharik-4.jpg",
         "description": descriptions.puppies
     },
     {
-        "id": "puppy5",
+        "id": "puppy2",
         "kind": "puppies",
         "name": "Tuzik",
         "age": "3 month",
         "color": "grey",
         "price": "Priceless",
-        "photo": "<img id='puppy2-img' class='pet' src='images/pets/puppy2.jpg'>",
+        "photo1": "images/pets/puppies/tuzik/tuzik-1.jpg",
+        "photo2": "images/pets/puppies/tuzik/tuzik-2.jpg",
+        "photo3": "images/pets/puppies/tuzik/tuzik-3.jpg",
+        "photo4": "images/pets/puppies/tuzik/tuzik-4.jpg",
         "description": descriptions.puppies
     },
-    {
-        "id": "puppy6",
-        "kind": "puppies",
-        "name": "Bobik",
-        "age": "3 month",
-        "color": "grey",
-        "price": "Priceless",
-        "photo": "<img id='puppy3-img' class='pet' src='images/pets/puppy3.jpg'>",
-        "description": descriptions.puppies
-    },
-
+    
     {
         "id": "snake1",
         "kind": "snakes",

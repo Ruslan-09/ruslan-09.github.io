@@ -54,7 +54,7 @@ function fillContent(contentId) {
         if (contentId === pet.kind || contentId === ALL_BUTTON_ID) {
             petsList += `<div class="pet">
                             <div id="${pet.id}" onclick="insertDescription('${pet.id}', 'descriptionSection')">
-                                ${pet.photo}<br>
+                                <img id='kitten1-img' class='pet' src='${pet.photo1}'><br>
                                 <figcaption>
                                     <h6>${pet.name}</h3>
                                     <p>Age: ${pet.age}</p>
@@ -79,7 +79,65 @@ function insertContent(buttonId, contentId) {
 }
 
 function insertDescription(petId, contentId) {
-    document.getElementById("section1").innerHTML = document.getElementById(contentId).innerHTML
+    for (pet of pets) {
+        if (petId === pet.id) {
+            let description = `
+                    <div style="float: left;">
+                        <figure class="pets-photo">
+                            <div id="imgPhotoMain" class="wrapper exmpl" onclick="zoom()"> 
+                                <img src='${pet.photo1}'>
+                            </div> 
+                            <figcaption id="123">
+                                <div class="wrapper1 exmpl1" id="imgChoose1" onclick="insertPetsPhoto('imgChoose1', 'imgPhotoMain')">
+                                    <img src="${pet.photo1}">
+                                </div>
+                                <div class="wrapper1 exmpl1" id="imgChoose2" onclick="insertPetsPhoto('imgChoose2', 'imgPhotoMain')">
+                                    <img src="${pet.photo2}">
+                                </div>
+                                <div class="wrapper1 exmpl1" id="imgChoose3" onclick="insertPetsPhoto('imgChoose3', 'imgPhotoMain')">
+                                    <img src="${pet.photo3}">
+                                </div>
+                                <div class="wrapper1 exmpl1" id="imgChoose4" onclick="insertPetsPhoto('imgChoose4', 'imgPhotoMain')">
+                                    <img src="${pet.photo4}">
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div id="imageZoomDivWrapper" class="imageZoomDivWrapper" style="display: none;">
+                        <div id="imageZoomDiv" class="imageZoom Div" onclick="closeImage()"></div>
+                        <div id="leftArrow" class="left arrow" onclick="left()">
+                            <img class="left-right-img" src="images/left.png" alt="">
+                        </div>
+                        <div id="rightArrow" class="right arrow" onclick="right()">
+                            <img class="left-right-img" src="images/right.png" alt="">
+                        </div>
+                        <div id="closeSign" class="closeSign" onclick="closeImage()">
+                            <img src="images/close.png" alt="">
+                        </div>
+                    </div>
+                    <div style="display: inline-block; margin-left: 5%;">
+                        <button class="buy" onclick="M.toast({html: 'Still under development'})">Take me home</button>
+                        <button class="buy" onclick="addToCart('${pet.id}')">Add to cart</button>
+                        <h5>Name: ${pet.name}</h5>
+                        <p>Age: ${pet.age}</p>
+                        <p>Color: ${pet.color}</p>
+                        <p><strong>Price: ${pet.price}</strong></p>
+                        <h5>Description:</h5> 
+                        <p>${pet.description}</p>
+                    </div>	
+                    <div id="commentSection" class="comment-section">
+                        <h6>Leave your comment:</h6>
+                        <hr>
+                        <div id="commentAdd"></div><br>
+                        <input type="text" name="" id="inputNane" placeholder="Your name" style="zoom: 0.7; width: 60%;"><br>
+                        <textarea name="" id="textarea" class="materialize-textarea" placeholder="Your comment" cols="60" rows="10"></textarea><br>
+                        <button class="addToCart" style="width: 80px;" onclick="sendComment()">Send</button>
+                    </div>`
+            document.getElementById(contentId).innerHTML = description
+            document.getElementById('section1').innerHTML = document.getElementById(contentId).innerHTML
+        }
+    }
+
 }
 
 function insertPetsPhoto(imgButtonId, divId) {
@@ -176,13 +234,13 @@ function showCart() {
             <img src="images/close.png" alt="">
         </div>
         <btn>
-            <button class="logIn" onclick="M.toast({ html: 'Still under development' })">Buy</button>
+            <button id="buyButton" class="cart" data-count="${cartCounter}" onclick="M.toast({ html: 'Still under development' })">Buy</button>
         </btn>`
 
     Object.keys(cart).forEach(id => {
         document.getElementById('cartWrapper').innerHTML += `
             <div class="cart-item">
-                ${getPetById(id).photo}
+                <img id='kitten1-img' class='pet' src='${getPetById(id).photo1}'>
                 <div>
                     <strong>${getPetById(id).name}</strong> <br>
                     Age: ${getPetById(id).age} <br>
@@ -197,6 +255,7 @@ function showCart() {
 function removeItemFromCart(id) {
     delete cart[id]
     cartCounter--
+    document.getElementById('buyButton').setAttribute('data-count', cartCounter)
     document.getElementById('cartButton').setAttribute('data-count', cartCounter)
 }
 

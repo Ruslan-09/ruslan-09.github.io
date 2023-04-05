@@ -16,7 +16,7 @@ button {
 
 button.cart {
     position: relative;
-    width: 100px; height: 28px;
+    width: 90px; height: 28px;
     margin: 0 3px 0 3px;
     text-align: center;
 }
@@ -39,7 +39,7 @@ button.cart::after, button.nav::after {
     transform: translate(0, -50%);
     border-radius: 40%;
     padding: 3%;
-    font-size: 50%;
+    font-size: 55%;
     margin-left: 20%;
     color: black;
     background-color: rgb(226, 213, 213);
