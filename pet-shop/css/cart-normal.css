@@ -16,11 +16,19 @@
     border: 0.5px solid rgb(165, 168, 182);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.266);
 }
-.cart-wrapper btn button {
+
+.closeCart {
     position: fixed;
-    bottom: 10%; right: 13%;
-    text-align: center;
-    z-index: 999;
+    top: 5%;
+    right: 12%;
+    width: auto; height: 5%;
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+    opacity: 40%;
+}
+.closeCart:hover {
+    opacity: 100%;
 }
 
 .cart-item {
@@ -43,7 +51,6 @@
     float: left;
     margin: 10px 150px 10px 5px;
 }
-
 img.deleteIcon {
     position: absolute;
     bottom: 10%; right: 0.3%;
@@ -56,17 +63,18 @@ img.deleteIcon:hover {
     border-radius: 50%;
 }
 
-.closeCart {
-    position: fixed;
-    top: 5%;
-    right: 12%;
-    width: auto; height: 5%;
-    overflow: hidden;
-    display: flex;
-    cursor: pointer;
-    opacity: 40%;
+.btnBuy {
+    position: fixed; 
+    bottom: 7.1%; left: 11%;
+    width: 77%; height: 10%;
+    background-color: rgb(228, 230, 240);
+    z-index: 999;
 }
-.closeCart:hover {
-    opacity: 100%;
+.btnBuy button {
+    position: fixed;
+    bottom: 10%; right: 13%;
+    width: 13%; 
+    text-align: left;
+    z-index: 999;
 }
 }

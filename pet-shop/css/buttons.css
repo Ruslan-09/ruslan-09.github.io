@@ -38,7 +38,7 @@ button.cart::after, button.nav::after {
     top: 50%; right: 5%;
     transform: translate(0, -50%);
     border-radius: 40%;
-    padding: 3%;
+    padding: 2%;
     font-size: 55%;
     margin-left: 20%;
     color: black;

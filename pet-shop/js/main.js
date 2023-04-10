@@ -233,9 +233,9 @@ function showCart() {
         <div id="closeSignCart" class="closeCart" onclick="document.getElementById('cartWrapper').style.display='none'">
             <img src="images/close.png" alt="">
         </div>
-        <btn>
-            <button id="buyButton" class="cart" data-count="${cartCounter}" onclick="M.toast({ html: 'Still under development' })">Buy</button>
-        </btn>`
+        <div class='btnBuy'>
+            <button id="buyButton" class="cart" data-count="${cartCounter}" onclick="M.toast({ html: 'Still under development' })">Take home</button>
+        </div class='btnBuy'>`
 
     Object.keys(cart).forEach(id => {
         document.getElementById('cartWrapper').innerHTML += `
