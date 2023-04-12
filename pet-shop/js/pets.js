@@ -122,7 +122,7 @@ let pets = [
         "age": "3 month",
         "color": "grey",
         "price": "Priceless",
-        "photo": "<img id='snake1-img' class='pet' src='images/pets/snake1.jpg'>",
+        "photo1": "images/pets/snake-1.jpg",
         "description": descriptions.snakes
     },
 
@@ -133,7 +133,7 @@ let pets = [
         "age": "3 month",
         "color": "grey",
         "price": "Priceless",
-        "photo": "<img id='spider1-img' class='pet' src='images/pets/spider1.jpg'>",
+        "photo1": "images/pets/spider-1.jpg",
         "description": descriptions.spiders
     }
 ]

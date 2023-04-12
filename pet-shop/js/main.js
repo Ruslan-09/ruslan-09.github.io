@@ -54,7 +54,7 @@ function fillContent(contentId) {
         if (contentId === pet.kind || contentId === ALL_BUTTON_ID) {
             petsList += `<div class="pet">
                             <div id="${pet.id}" onclick="insertDescription('${pet.id}', 'descriptionSection')">
-                                <img id='kitten1-img' class='pet' src='${pet.photo1}'><br>
+                                <img class='pet' src='${pet.photo1}'><br>
                                 <figcaption>
                                     <h6>${pet.name}</h3>
                                     <p>Age: ${pet.age}</p>

@@ -37,12 +37,19 @@ button.cart::after, button.nav::after {
     position: absolute;
     top: 50%; right: 5%;
     transform: translate(0, -50%);
-    border-radius: 40%;
-    padding: 2%;
-    font-size: 55%;
-    margin-left: 20%;
+
+    aspect-ratio: 1/1;
+    height: 60%;
+    font-size: 60%;
+    border-radius: 50%;
+
     color: black;
     background-color: rgb(226, 213, 213);
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 button.addToCart {
@@ -145,12 +152,19 @@ button.selected {
         position: absolute;
         top: 50%; right: 5%;
         transform: translate(0, -50%);
-        border-radius: 50%;
-        padding: 3%;
+
+        aspect-ratio: 1/1;
+        height: 60%;
         font-size: 60%;
-        margin-left: 20%;
+        border-radius: 50%;
+    
         color: black;
         background-color: rgb(226, 213, 213);
+    
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
     }
 }
 
